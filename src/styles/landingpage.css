@@ -1,0 +1,16 @@
+h1 {
+    font-size: 64px;
+}
+
+h1,
+h2 {
+    color: #E7E9EA;
+}
+
+.googlesvg {
+    width: 20px;
+}
+
+.login:hover {
+    background-color: #031018;
+}
