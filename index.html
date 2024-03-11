@@ -10,9 +10,9 @@
 </head>
 <body class="bg-black vh-100 d-flex justify-content-center align-items-center">
     <div class="container ">
-        <div class="row mt-4 align-items-center ">
+        <div class="row mt-4 align-items-center">
             <div class="col-1"></div>
-            <div class="col-6">
+            <div class="col-6 ">
                 <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 360px;  fill: rgb(231, 233, 234);">
                     <g>
                         <path
@@ -20,7 +20,6 @@
                         </path>
                     </g>
                 </svg>
-
             </div>
             <div class="col-5">
                 <h1 class="mb-5" style="color:#E7E9EA;">Happening now</h1>
@@ -50,9 +49,10 @@
                     </div>
                 </div>
                 <div class="d-grid col-7">
-                    <button type="button" class="btn text-white fw-bold rounded-pill mt-2 mb-2"
+                    <button type="button" class="createAccount btn text-white fw-bold rounded-pill mt-2 mb-2"
                         style="background-color: #1D9BF0;">
-                        <span style="margin: 5px;font-size: 15px;">Create account</span> </button>
+                        <span style="margin: 5px;font-size: 15px;">Create account</span>
+                    </button>
                     <p class="fw-light text-white " style="font-size: 11px; color: rgb(113, 118, 123);">
                         By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.
                     </p>
@@ -60,12 +60,94 @@
                         Already have an account?
                     </h3>
                     <button type="button" class="login btn btn-outline-secondary text-white fw-bold rounded-pill mt-2">
-                        <span style="margin: 5px;font-size: 15px; color: rgb(29, 155, 240);">Sign in</span> </button>
+                        <span style="margin: 5px;font-size: 15px; color: rgb(29, 155, 240);">Sign in</span>
+                    </button>
                 </div>
+
+                <!-- Create Account Modal -->
+                <div class="modal" id="createAccountModal">
+                    <div class="modal-dialog d-flex vh-100 align-items-center" style="max-width: 600px !important;">
+                        <div class="modal-content bg-black">
+                            <div class="modal-body d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn-close btn-close-white"></button>
+                                <div class="d-flex justify-content-center align-items-center" style="flex: 1;">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                                        style="width: 32px; fill: rgb(231, 233, 234);">
+                                        <g>
+                                            <path
+                                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center ">
+                                <div class="col-8">
+                                    <form id="registrationForm ">
+                                        <h3 class="text-white mb-4">Create your account</h3>
+                                        <div class="mb-3 form-floating">
+                                            <input type="text" class="form-control bg-black text-white " id="name"
+                                                placeholder=" " required>
+                                            <label for="name" class="text-white">Name</label>
+                                        </div>
+                                        <div class="mb-3 form-floating">
+                                            <input type="email" class="form-control bg-black text-white" id="email"
+                                                placeholder=" " required>
+                                            <label for="email" class="text-white ">Email</label>
+                                        </div>
+                                        <div class="mb-3 form-floating">
+                                            <input type="password" class="form-control bg-black text-white"
+                                                id="password" placeholder=" " required>
+                                            <label for="password" class="text-white">Password</label>
+                                        </div>
+                                        <div class="mb-3 form-floating">
+                                            <input type="password" class="form-control bg-black text-white"
+                                                id="confirmPassword" placeholder=" " required>
+                                            <label for="confirmPassword" class="text-white">Confirm Password</label>
+                                        </div>
+                                        <div class="d-grid gap-2 m-5">
+                                            <button type="submit" class="btn btn-primary  rounded-pill g-5">Create
+                                                Account</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login Modal -->
+                <div class="modal" id="loginModal">
+                    <div class="modal-dialog d-flex vh-100 align-items-center">
+                        <div class="modal-content bg-black">
+                            <div class="modal-header d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn-close btn-close-white"></button>
+                                <div class="d-flex justify-content-center align-items-center" style="flex: 1;">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                                        style="width: 32px; fill: rgb(231, 233, 234);">
+                                        <g>
+                                            <path
+                                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="modal-body">
+                                <!-- Your login form goes here -->
+                                <p>Login form goes here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     </div>
 
+    <script src="./src/scripts/landingPage.js"></script>
 </body>
 </html>
