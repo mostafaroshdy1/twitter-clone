@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+}
+
+nav {
+    font-size: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(214, 202, 202);
+}
+
+header a {
+    font-size: 1.8em;
+    color: rgb(214, 202, 202);
+}
+
+nav ~div {
+    color: rgb(214, 202, 202);
+    display: inline-block;
+}
+
+nav div:hover,
+header a:hover {
+    background-color: #302f29;
+}
+
+.btn-custom {
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #157fdb;
+    border-color: #157fdb;
+}
+
+.btn-custom:hover {
+    color: #ffffff;
+    background-color: #1068b4;
+    border-color: #1068b4;
+}
+
+#left-side {
+    height: 100vh;
+}
+
+#profile {
+    font-weight: bold;
+}
+
+#user-details {
+    line-height: .9;
+}
+
+nav footer {
+    color: rgb(112, 96, 96);
+}
+
+#username {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#user-details{
+    font-size: .8em;
+}
