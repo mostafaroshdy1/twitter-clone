@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    color: white;
 }
 
 nav {
@@ -13,17 +14,17 @@ nav a {
 
 header a {
     font-size: 1.8em;
-    color: rgb(214, 202, 202);
+    color: white;
+}
+nav div div {
+    color: white;
+    font-size: 1.2em;
 }
 
-nav ~div {
-    color: rgb(214, 202, 202);
-    display: inline-block;
-}
-
-nav div:hover,
-header a:hover {
-    background-color: #302f29;
+nav div div:hover,
+nav header div:hover,
+nav footer section:hover {
+        background-color: #302f29;
 }
 
 .btn-custom {
@@ -54,7 +55,6 @@ header a:hover {
 nav footer {
     color: rgb(112, 96, 96);
 }
-
 #username {
     color: white;
     display: flex;
@@ -62,5 +62,6 @@ nav footer {
 }
 
 #user-details{
-    font-size: .8em;
+    font-size: .7em;
+    line-height: 1.3;
 }
