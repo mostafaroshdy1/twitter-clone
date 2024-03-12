@@ -1,0 +1,67 @@
+body {
+    margin: 0 !important; 
+    padding: 0 !important;
+  }
+
+.row{
+  margin-left: 0 !important; 
+  margin-right: 0 !important; 
+  padding: 0 !important;
+}
+
+.main-body{
+    margin-top: 10vh;
+}
+
+.custom-nav-link a{
+    color: black;
+    font-size: 1.5rem;
+    transition: border 0.5s ease, font-weight 0.3s ease;
+}
+
+.custom-nav-link i{
+    padding-right: 0.5em;
+}
+
+.main-icon:hover{
+    background-color: #ccc; 
+    border-radius: 2em;
+}
+
+.nav-link:hover, .profile-bar:hover {
+    background-color: #ccc; 
+    border-radius: 5em;
+    color: black;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: black;
+}
+
+.left-bar{
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+}
+
+.search-bar{
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    width: 73.6%;
+    background-color: white;
+}
+
+.profile-bar {
+    position: fixed;
+    bottom: 0;
+    z-index: 1031;
+    width: 20%;
+}
+
+#scrollable-container {
+    max-height: 100vh;
+    border: 1px solid #ddd; /* Optional: add border for better visibility */
+}
+
