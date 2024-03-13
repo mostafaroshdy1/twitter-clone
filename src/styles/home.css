@@ -62,6 +62,15 @@ body {
 
 #scrollable-container {
     max-height: 100vh;
-    border: 1px solid #ddd; /* Optional: add border for better visibility */
+    border: 1px solid #ddd; 
+}
+
+.profileImage{
+    width: 15%;
+    height: 15%;
+}
+
+#user_name{
+    font-weight: bold;
 }
 

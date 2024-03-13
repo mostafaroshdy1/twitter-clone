@@ -40,9 +40,12 @@
         </div>
         
         <!-- Profile Bar -->
-          <div class="profile-bar p-3 d-lg-flex justify-content-between d-none" onmouseover="changeCursor(this, 'pointer')" onmouseout="changeCursor(this,'auto')">
-            <div>Hi</div>
-            <div>Hi</div>
+          <div class="profile-bar p-3 d-lg-flex justify-content-between d-none align-items-center" onmouseover="changeCursor(this, 'pointer')" onmouseout="changeCursor(this,'auto')" style="max-height: 10vh;">
+            <img src="../../public/images/profileImg.jpg" class="img-fluid rounded-circle profileImage" alt="Profile Image">
+            <div>
+               <div id="user_name"></div>
+               <div id="user_email"></div>
+            </div>
             <i class="bi bi-three-dots"></i>
         </div>
     </div>
@@ -67,7 +70,7 @@
 
          <!-- Lower scrollable bar -->
         <div class="row main-body">
-                    <!-- Main Section -->
+             <!-- Main Section -->
             <div class="col-12 col-md-10 col-lg-7 border" >
                 Main Section
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem quae, voluptatem inventore perferendis nisi nostrum ducimus veritatis ea maiores suscipit deleniti placeat voluptatibus nemo repudiandae, odit corrupti aliquid cupiditate cum.
@@ -89,17 +92,6 @@
 
             <!-- Right Section -->
             <div class="d-none d-lg-block col-lg-5">
-                <!-- Search Bar -->
-                <!-- <div class="search-bar">
-                    <div class="container mt-3">
-                        <div class="input-group mb-3 border rounded-3">
-                            <button class="btn btn-outline-none bg-light" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
-                            <input type="text" class="form-control border-0 bg-light" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" onfocus="showSearchMessage()" onblur="hideSearchMessage()">
-                        </div>
-                        <div id="searchMessage" class="text-muted" style="display: none;">Try searching for people, lists, or keywords</div>
-                    </div>
-                </div>
-                -->
 
                 <!-- Subscribe to Premium Card -->
                     <div class="card m-2 bg-light rounded-3">
