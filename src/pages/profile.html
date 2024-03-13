@@ -18,7 +18,7 @@
 <body>
     <div class="container row">
         <div class="col-3 border-end" id="left-side">
-            <nav> 
+            <nav>
                 <header class="row mx-3">
                     <div class="rounded-5 col-3">
                         <a href="#">
@@ -27,7 +27,7 @@
                     </div>
                 </header>
                 <div class="p-3">
-                    <div class="rounded-5 p-2 my-1 col-7" >
+                    <div class="rounded-5 p-2 my-1 col-7">
                         <a href="#">
                             <i class="fa-solid fa-house px-2"></i>
                             <span class="col-5">Home</span>
@@ -79,12 +79,12 @@
                     <section class="row col-11 p-2 rounded-5 mt-5 mx-1">
                         <div class="col-3">
                             <a href="#">
-                                <img src="../../public/Images/1.jpeg" class="rounded-circle" width="45px"/>
+                                <img src="../../public/Images/3.jpeg" class="rounded-circle" width="45px" />
                             </a>
                         </div>
                         <div class="col-7" id="user-details">
                             <span id="username">ندى</span>
-                            <span>@nadarabea81</span>                    
+                            <span>@nadarabea81</span>
                         </div>
                         <div class="col-1">
                             <a href="#">
@@ -96,10 +96,98 @@
             </nav>
         </div>
         <main class="col-7 border-end">
-
+            <header class="row col-12 my-2">
+                <div class="col-1 rounded-circle px-3 mx-2">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-left back"></i>
+                    </a>
+                </div>
+                <div class="col-lg-10">
+                    <span><b>ندى</b></span><br />
+                    <span id="no-posts">333 posts</span>
+                </div>
+            </header>
+            <section class="mt-4">
+                <div class="profile-header"></div>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="profile-image">
+                                <img src="../../public/Images/3.jpeg" class="rounded-circle" alt="Profile Image">
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <button class="button rounded-5 p-2 px-3" id="openModal">Edit Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="row mx-1">
+                <div id="user-details-main">
+                    <span id="username-main">ندى</span>
+                    <span>@nadarabea81</span>
+                </div>
+                <div class="row my-2">
+                    <div class="col-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Alexandria,Egypt</span>
+                    </div>
+                    <div class="col-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-balloon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 9.984C10.403 9.506 12 7.48 12 5a4 4 0 0 0-8 0c0 2.48 1.597 4.506 4 4.984M13 5c0 2.837-1.789 5.227-4.52 5.901l.244.487a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.244-.487C4.789 10.227 3 7.837 3 5a5 5 0 0 1 10 0m-6.938-.495a2 2 0 0 1 1.443-1.443C7.773 2.994 8 2.776 8 2.5s-.226-.504-.498-.459a3 3 0 0 0-2.46 2.461c-.046.272.182.498.458.498s.494-.227.562-.495" />
+                        </svg>
+                        <span>Born June 27, 2001</span>
+                    </div>
+                    <div class="col-4">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>Joined May 2021</span>
+                    </div>
+                </div>
+                <div class="row col-12">
+                    <div class="col-3">
+                        <span style="color: white;"><b>22</b></span>
+                        <span>Following</span>
+                    </div>
+                    <div class="col-3">
+                        <span style="color: white;"><b>22</b></span>
+                        <span>Followers</span>
+                    </div>
+                </div>
+            </section>
+            <section class="row col-12">
+                <nav class="my-3">
+                    <div class="col-2">
+                        <a href="#" class="nav-link active" data-target="posts">Posts</a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#" class="nav-link" data-target="replies">Replies</a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#" class="nav-link" data-target="highlights">Highlights</a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#" class="nav-link" data-target="articles">Articles</a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#" class="nav-link" data-target="media">Media</a>
+                    </div>
+                    <div class="col-2">
+                        <a href="#" class="nav-link" data-target="likes">Likes</a>
+                    </div>
+                </nav>
+            </section>
+            <section id="tab-content" class="row col-12">
+                <div id="posts" class="tab-content active">Posts</div>
+                <div id="replies" class="tab-content">Replies</div>
+                <div id="highlights" class="tab-content">Highlights</div>
+                <div id="articles" class="tab-content">Articles</div>
+                <div id="media" class="tab-content">Media</div>
+                <div id="likes" class="tab-content">Likes</div>
+            </section>
         </main>
         <aside class="col-3">
-
         </aside>
     </div>
     <script src="../scripts/profile.js"></script>
