@@ -65,9 +65,9 @@
                 </div>
 
                 <!-- Create Account Modal -->
-                <div class="modal" id="createAccountModal">
-                    <div class="modal-dialog d-flex vh-100 align-items-center" style="max-width: 600px !important;">
-                        <div class="modal-content bg-black">
+                <div class="modal " id="createAccountModal">
+                    <div class="modal-dialog  d-flex vh-100 align-items-center" style="max-width: 600px !important;">
+                        <div class="modal-content rounded-4 bg-black">
                             <div class="modal-body d-flex justify-content-between align-items-center">
                                 <button type="button" class="btn-close btn-close-white"></button>
                                 <div class="d-flex justify-content-center align-items-center" style="flex: 1;">
@@ -83,30 +83,37 @@
                             </div>
                             <div class="d-flex justify-content-center ">
                                 <div class="col-8">
-                                    <form id="registrationForm ">
-                                        <h3 class="text-white mb-4">Create your account</h3>
-                                        <div class="mb-3 form-floating">
+                                    <form id="registrationForm">
+                                        <h3 style="font-size: 31px;" class="text-white mb-4">Create your account</h3>
+                                        <div class="mb-4 form-floating">
                                             <input type="text" class="form-control bg-black text-white " id="name"
                                                 placeholder=" " required>
                                             <label for="name" class="text-white">Name</label>
                                         </div>
-                                        <div class="mb-3 form-floating">
+                                        <div class="mb-4 form-floating">
                                             <input type="email" class="form-control bg-black text-white" id="email"
                                                 placeholder=" " required>
                                             <label for="email" class="text-white ">Email</label>
                                         </div>
-                                        <div class="mb-3 form-floating">
+                                        <div class="mb-4 form-floating">
                                             <input type="password" class="form-control bg-black text-white"
-                                                id="password" placeholder=" " required>
+                                                id="password" placeholder=" " pattern="^(?=.*[a-zA-Z]).{9,}$"
+                                                title="Password must contain at least one letter and be at least 9 characters long"
+                                                required>
                                             <label for="password" class="text-white">Password</label>
+                                            <small id="passwordError" class="text-danger"></small>
+                                            <!-- Error message -->
                                         </div>
-                                        <div class="mb-3 form-floating">
+
+                                        <div class="mb-4 form-floating">
                                             <input type="password" class="form-control bg-black text-white"
                                                 id="confirmPassword" placeholder=" " required>
                                             <label for="confirmPassword" class="text-white">Confirm Password</label>
                                         </div>
-                                        <div class="d-grid gap-2 m-5">
-                                            <button type="submit" class="btn btn-primary  rounded-pill g-5">Create
+
+                                        <div class="d-grid gap-2 mt-5 mb-5 pt-5">
+                                            <button type="submit"
+                                                class="btn btn-primary  btn-lg rounded-pill g-5">Create
                                                 Account</button>
                                         </div>
                                     </form>
@@ -117,12 +124,28 @@
                     </div>
                 </div>
 
-                <!-- Login Modal -->
+                <!-- Congratulatory Modal -->
+                <div id="congratsModal" class="modal">
+                    <div class="modal-dialog ">
+                        <div class="modal-content rounded-4 bg-black">
+                            <div class="modal-body">
+                                <h5 class="modal-title text-white">Congratulations!</h5>
+
+                                <p class="text-white">Your account has been successfully created.</p>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="hideCongratsModal()">Continue to
+                                login</button>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="modal" id="loginModal">
-                    <div class="modal-dialog d-flex vh-100 align-items-center">
-                        <div class="modal-content bg-black">
-                            <div class="modal-header d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn-close btn-close-white"></button>
+                    <div class="modal-dialog d-flex vh-100 align-items-center" style="max-width: 600px !important;">
+                        <div class="modal-content rounded-4 bg-black">
+                            <div class="modal-body d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn-close btn-close-white"
+                                    onclick="hideLoginModal()"></button>
                                 <div class="d-flex justify-content-center align-items-center" style="flex: 1;">
                                     <svg viewBox="0 0 24 24" aria-hidden="true"
                                         style="width: 32px; fill: rgb(231, 233, 234);">
@@ -134,10 +157,27 @@
                                     </svg>
                                 </div>
                             </div>
-
-                            <div class="modal-body">
-                                <!-- Your login form goes here -->
-                                <p>Login form goes here...</p>
+                            <div class="d-flex justify-content-center">
+                                <div class="col-8">
+                                    <form id="loginForm">
+                                        <h3 style="font-size: 31px;" class="text-white mb-4">Login to your account</h3>
+                                        <div class="mb-4 form-floating">
+                                            <input type="email" class="form-control bg-black text-white" id="loginEmail"
+                                                placeholder=" " required>
+                                            <label for="loginEmail" class="text-white">Email</label>
+                                        </div>
+                                        <div class="mb-4 form-floating">
+                                            <input type="password" class="form-control bg-black text-white"
+                                                id="loginPassword" placeholder=" " required>
+                                            <label for="loginPassword" class="text-white">Password</label>
+                                            <small id="loginError" class="text-danger"></small> <!-- Error message -->
+                                        </div>
+                                        <div class="d-grid gap-2 mt-5 mb-5 ">
+                                            <button type="submit"
+                                                class="btn btn-primary btn-lg rounded-pill g-5">Login</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

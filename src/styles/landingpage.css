@@ -38,8 +38,12 @@ h2 {
 
 
 .form-control+label::after {
-    color: rgb(0, 0, 0) !important;
+
     background-color: rgb(0, 0, 0) !important;
+}
+
+.form-control+label {
+    color: #6D7277 !important;
 }
 
 .form-control {
