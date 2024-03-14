@@ -75,7 +75,7 @@ function createTrendDivs(count) {
         div.innerHTML = `
             <div class="d-flex justify-content-between align-items-center">
                 <span>Trending in Egypt</span>
-                <i class="bi bi-three-dots rounded-circle p-1 w-2"></i>
+                <i class="fas fa-ellipsis-h rounded-circle p-1 w-2"></i>
             </div>
             <div class="text-end">
                 <span>أحدث_الأخبار#</span>
