@@ -1,14 +1,9 @@
 
 function iconHomeClicked() {
-    window.location.href = 'index.html';
-}
-
-function changeCursor(iconElement, cursorType) {
-    iconElement.style.cursor = cursorType;
+    window.location.href = 'home.html';
 }
 
 //Nav bar active class
-
 function setActive(element) {
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
     element.classList.add('active');
@@ -21,12 +16,11 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 //Search bar message appearnce
-
 function showSearchMessage() {
     document.getElementById("searchMessage").style.display = "block";
 }
 
-function hideSearcMessage() {
+function hideSearchMessage() {
     document.getElementById("searchMessage").style.display = "none";
 }
 
@@ -70,4 +64,26 @@ function updateProfileBar() {
 document.addEventListener("DOMContentLoaded", function() {
     updateProfileBar();
 });
+
+//Create What's happening trends
+function createTrendDivs(count) {
+    var container = document.getElementById('trends-container');
+    var beforeElement = document.getElementById('show-more');
+    for (var i = 0; i < count; i++) {
+        var div = document.createElement('div');
+        div.className = 'trend';
+        div.innerHTML = `
+            <div class="d-flex justify-content-between align-items-center">
+                <span>Trending in Egypt</span>
+                <i class="bi bi-three-dots rounded-circle p-1 w-2"></i>
+            </div>
+            <div class="text-end">
+                <span>أحدث_الأخبار#</span>
+            </div>`;
+        container.insertBefore(div, beforeElement);
+        }
+}
+
+// Call the function to generate 5 instances of the HTML structure before a specific div with id "specificDiv"
+createTrendDivs(5, "specificDiv");
 
