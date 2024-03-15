@@ -1,10 +1,12 @@
 *{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
 }
 
 body {
     margin: 0 !important; 
     padding: 0 !important;
+    background-color: black;
   }
 
 .row{
@@ -22,7 +24,7 @@ body {
 }
 
 .main-icon:hover{
-    background-color: #ccc; 
+    background-color: #181818; 
     border-radius: 2em;
     cursor: pointer;
 }
@@ -49,20 +51,20 @@ body {
     height: 15%;
 }
 
-#user_name{
+#user_email{
+    color: #A9A9A9;
+}
+
+#user_name,
+.nav-link.active {
     font-weight: bold;
 }
 
 .nav-link:hover, .profile-bar:hover {
-    background-color: #ccc; 
+    background-color: #181818; 
     border-radius: 3em;
     color: black;
     cursor: pointer;
-}
-
-.nav-link.active {
-    font-weight: bold;
-    color: black;
 }
 
 #scrollable-container {
@@ -76,7 +78,8 @@ body {
     z-index: 1030;
     width: 73.6%;
     height: 10.5vh;
-    background-color: white;
+    background-color: black;
+    color: white;
 }
 
 .top-section{
@@ -88,15 +91,16 @@ body {
     height: 100%;
     padding-top: 3vh;
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 
 .top-section i:hover,
 .top-section a:hover,
 .trend:hover,
-.user:hover{
-    background-color: #ccc; 
+.user:hover,
+#show-more:hover{
+    background-color: #202020; 
     cursor: pointer;
 }
 
@@ -113,8 +117,17 @@ body {
 }
 
 #searchMessage{
-    background-color: white;
+    background-color: black;
     padding: 2rem;
+    border-radius: 0.5em;
+    color: #A9A9A9 !important;
+}
+
+#button-addon2,
+.form-control,
+.form-control::placeholder{
+    background-color: black !important;
+    color: #A9A9A9 !important;
 }
 
 .form-control:focus {
@@ -125,8 +138,10 @@ body {
     font-weight: 700; 
 }
 
-.card-body{
+.card, .card-body{
     padding: 0;
+    background-color:#181818 !important;
+    color: white;
 }
 
 .card-body > h5,
@@ -140,6 +155,15 @@ body {
     cursor: pointer;
 }
 
+.trend span, i{
+    color: #A9A9A9;
+}
+
+.text-end span{
+    color: white;
+    font-weight: bolder;
+}
+
 #show-more a{
     text-decoration: none;
 }
@@ -148,10 +172,11 @@ body {
 .footer span{
     text-decoration: none;
     font-size: 0.7em;
-    color: black;
+    color: #A9A9A9;
 }
 
 .footer a:hover{
     text-decoration: underline;
 }
+
 
