@@ -1,6 +1,7 @@
 *{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
+    border-color: black !important;
 }
 
 body {
@@ -40,7 +41,6 @@ body {
 .custom-nav-link i{
     padding-right: 0.5em;
 }
-
 
 .profile-bar{
     max-height: 10vh;
