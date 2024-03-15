@@ -97,7 +97,7 @@ const loginError = document.getElementById('loginError');
 function checkCredentials(email, password) {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser && storedUser.email === email && storedUser.password === password) {
-        window.location.href = '/home.html';
+        window.location.href = '/src/pages/home.html';
 
     } else {
 
