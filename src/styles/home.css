@@ -1,0 +1,182 @@
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    border-color: black !important;
+}
+
+body {
+    margin: 0 !important; 
+    padding: 0 !important;
+    background-color: black;
+  }
+
+.row{
+  margin-left: 0 !important; 
+  margin-right: 0 !important; 
+  padding: 0 !important;
+}
+
+.left-bar{
+    position: relative;
+    max-height: 100vh;
+    border: 1px solid #ddd; 
+    padding-right: 1rem !important;
+    padding-left: 5rem !important;
+}
+
+.main-icon:hover{
+    background-color: #181818; 
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.custom-nav-link a{
+    display: inline-block;
+    color: black;
+    font-size: 1.3em;
+    transition: border 0.5s ease, font-weight 0.3s ease;
+    line-height: 0 !important;
+}
+
+.custom-nav-link i{
+    padding-right: 0.5em;
+}
+
+.profile-bar{
+    max-height: 10vh;
+}
+
+.profileImage{
+    width: 15%;
+    height: 15%;
+}
+
+#user_email{
+    color: #A9A9A9;
+}
+
+#user_name,
+.nav-link.active {
+    font-weight: bold;
+}
+
+.nav-link:hover, .profile-bar:hover {
+    background-color: #181818; 
+    border-radius: 3em;
+    color: black;
+    cursor: pointer;
+}
+
+#scrollable-container {
+    max-height: 100vh;
+    border: 1px solid #ddd; 
+}
+
+.top-bar{
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    width: 73.6%;
+    height: 10.5vh;
+    background-color: black;
+    color: white;
+}
+
+.top-section{
+    height: 10.5vh;
+    padding: 0 !important;
+}
+
+.top-section a{
+    height: 100%;
+    padding-top: 3vh;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.top-section i:hover,
+.top-section a:hover,
+.trend:hover,
+.user:hover,
+#show-more:hover{
+    background-color: #202020; 
+    cursor: pointer;
+}
+
+.main-body{
+    margin-top: 10vh;
+}
+
+.main-section{
+    padding: 0 !important;
+}
+
+.right-bar{
+    padding-right: 5rem !important;
+}
+
+#searchMessage{
+    background-color: black;
+    padding: 2rem;
+    border-radius: 0.5em;
+    color: #A9A9A9 !important;
+}
+
+#button-addon2,
+.form-control,
+.form-control::placeholder{
+    background-color: black !important;
+    color: #A9A9A9 !important;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.card-title.font-weight-bold{
+    font-weight: 700; 
+}
+
+.card, .card-body{
+    padding: 0;
+    background-color:#181818 !important;
+    color: white;
+}
+
+.card-body > h5,
+.card-body > div {
+    padding: 0.7em;
+}
+
+.card-body i:hover {
+    color:rgb(63, 148, 197);
+    background-color: rgb(208, 224, 224); 
+    cursor: pointer;
+}
+
+.trend span, i{
+    color: #A9A9A9;
+}
+
+.text-end span{
+    color: white;
+    font-weight: bolder;
+}
+
+#show-more a{
+    text-decoration: none;
+}
+
+.footer a,
+.footer span{
+    text-decoration: none;
+    font-size: 0.7em;
+    color: #A9A9A9;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+

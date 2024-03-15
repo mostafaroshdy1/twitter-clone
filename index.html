@@ -6,8 +6,188 @@
     <title>X. It’s what’s happening / X</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/styles/landingpage.css">
 </head>
-<body>
+<body class="bg-black vh-100 d-flex justify-content-center align-items-center">
+    <div class="container ">
+        <div class="row mt-4 align-items-center">
+            <div class="col-1"></div>
+            <div class="col-6 ">
+                <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 360px;  fill: rgb(231, 233, 234);">
+                    <g>
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <div class="col-5">
+                <h1 class="mb-5" style="color:#E7E9EA;">Happening now</h1>
+                <h2 class="mb-4" style="color:#E7E9EA;">Join today.</h2>
+                <div class="d-grid col-7">
+                    <button type="button" class="btn bg-white rounded-pill mb-2"> <img class="googlesvg"
+                            src="./public/svg/google.svg" alt=""><span class=""
+                            style="margin: 5px;font-size: 15px;">Sign up with
+                            Google</span> </button>
+                    <button type="button" class="btn bg-white rounded-pill">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"
+                            style="color: rgb(15, 20, 25); width: 20px; height: 20px;">
+                            <g>
+                                <path
+                                    d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z">
+                                </path>
+                            </g>
+                        </svg>
+                        <span class="fw-bold" style="margin: 5px;font-size: 15px;">Sign up with
+                            Apple</span> </button>
+                </div>
+                <div class="row mt-1">
+                    <div class="d-grid col-3 border-top mt-3" style="border-top-color:#2F3336 !important;">
+                    </div>
+                    <span class="col-1 text-white mt-1">or</span>
+                    <div class="d-grid col-3 border-top mt-3" style="border-top-color:#2F3336 !important;">
+                    </div>
+                </div>
+                <div class="d-grid col-7">
+                    <button type="button" class="createAccount btn text-white fw-bold rounded-pill mt-2 mb-2"
+                        style="background-color: #1D9BF0;">
+                        <span style="margin: 5px;font-size: 15px;">Create account</span>
+                    </button>
+                    <p class="fw-light text-white " style="font-size: 11px; color: rgb(113, 118, 123);">
+                        By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.
+                    </p>
+                    <h3 class="text-white fs-6 mt-4">
+                        Already have an account?
+                    </h3>
+                    <button type="button" class="login btn btn-outline-secondary text-white fw-bold rounded-pill mt-2">
+                        <span style="margin: 5px;font-size: 15px; color: rgb(29, 155, 240);">Sign in</span>
+                    </button>
+                </div>
 
+                <!-- Create Account Modal -->
+                <div class="modal " id="createAccountModal">
+                    <div class="modal-dialog  d-flex vh-100 align-items-center" style="max-width: 600px !important;">
+                        <div class="modal-content rounded-4 bg-black">
+                            <div class="modal-body d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn-close btn-close-white"></button>
+                                <div class="d-flex justify-content-center align-items-center" style="flex: 1;">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                                        style="width: 32px; fill: rgb(231, 233, 234);">
+                                        <g>
+                                            <path
+                                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center ">
+                                <div class="col-8">
+                                    <form id="registrationForm">
+                                        <h3 style="font-size: 31px;" class="text-white mb-4">Create your account</h3>
+                                        <div class="mb-4 form-floating">
+                                            <input type="text" class="form-control bg-black text-white " id="name"
+                                                placeholder=" " required>
+                                            <label for="name" class="text-white">Name</label>
+                                        </div>
+                                        <div class="mb-4 form-floating">
+                                            <input type="email" class="form-control bg-black text-white" id="email"
+                                                placeholder=" " required>
+                                            <label for="email" class="text-white ">Email</label>
+                                        </div>
+                                        <div class="mb-4 form-floating">
+                                            <input type="password" class="form-control bg-black text-white"
+                                                id="password" placeholder=" " pattern="^(?=.*[a-zA-Z]).{9,}$"
+                                                title="Password must contain at least one letter and be at least 9 characters long"
+                                                required>
+                                            <label for="password" class="text-white">Password</label>
+                                            <small id="passwordError" class="text-danger"></small>
+                                            <!-- Error message -->
+                                        </div>
+
+                                        <div class="mb-4 form-floating">
+                                            <input type="password" class="form-control bg-black text-white"
+                                                id="confirmPassword" placeholder=" " required>
+                                            <label for="confirmPassword" class="text-white">Confirm Password</label>
+                                        </div>
+
+                                        <div class="d-grid gap-2 mt-5 mb-5 pt-5">
+                                            <button type="submit"
+                                                class="btn btn-primary  btn-lg rounded-pill g-5">Create
+                                                Account</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Congratulatory Modal -->
+                <div id="congratsModal" class="modal">
+                    <div class="modal-dialog ">
+                        <div class="modal-content rounded-4 bg-black">
+                            <div class="modal-body">
+                                <h5 class="modal-title text-white">Congratulations!</h5>
+
+                                <p class="text-white">Your account has been successfully created.</p>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="hideCongratsModal()">Continue to
+                                login</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal" id="loginModal">
+                    <div class="modal-dialog d-flex vh-100 align-items-center" style="max-width: 600px !important;">
+                        <div class="modal-content rounded-4 bg-black">
+                            <div class="modal-body d-flex justify-content-between align-items-center">
+                                <button type="button" class="btn-close btn-close-white"
+                                    onclick="hideLoginModal()"></button>
+                                <div class="d-flex justify-content-center align-items-center" style="flex: 1;">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                                        style="width: 32px; fill: rgb(231, 233, 234);">
+                                        <g>
+                                            <path
+                                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div class="col-8">
+                                    <form id="loginForm">
+                                        <h3 style="font-size: 31px;" class="text-white mb-4">Login to your account</h3>
+                                        <div class="mb-4 form-floating">
+                                            <input type="email" class="form-control bg-black text-white" id="loginEmail"
+                                                placeholder=" " required>
+                                            <label for="loginEmail" class="text-white">Email</label>
+                                        </div>
+                                        <div class="mb-4 form-floating">
+                                            <input type="password" class="form-control bg-black text-white"
+                                                id="loginPassword" placeholder=" " required>
+                                            <label for="loginPassword" class="text-white">Password</label>
+                                            <small id="loginError" class="text-danger"></small> <!-- Error message -->
+                                        </div>
+                                        <div class="d-grid gap-2 mt-5 mb-5 ">
+                                            <button type="submit"
+                                                class="btn btn-primary btn-lg rounded-pill g-5">Login</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="./src/scripts/landingPage.js"></script>
 </body>
 </html>
