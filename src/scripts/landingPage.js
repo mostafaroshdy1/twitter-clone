@@ -82,7 +82,7 @@ registrationForm.addEventListener('submit', function (event) {
 // Function to hide the congratulatory modal and redirect to another page
 function hideCongratsModal() {
     congratsModal.style.display = 'none';
-    window.location.href = '/';
+    window.location.href = 'https://mostafaroshdy1.github.io/twitter-clone/index.html';
 }
 
 
@@ -97,7 +97,7 @@ const loginError = document.getElementById('loginError');
 function checkCredentials(email, password) {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser && storedUser.email === email && storedUser.password === password) {
-        window.location.href = '/src/pages/home.html';
+        window.location.href = 'https://mostafaroshdy1.github.io/twitter-clone/src/pages/home.html';
 
     } else {
 
