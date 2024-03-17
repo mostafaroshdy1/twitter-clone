@@ -1,36 +1,36 @@
-*{
+* {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     border-color: black !important;
 }
 
 body {
-    margin: 0 !important; 
+    margin: 0 !important;
     padding: 0 !important;
     background-color: black;
-  }
-
-.row{
-  margin-left: 0 !important; 
-  margin-right: 0 !important; 
-  padding: 0 !important;
 }
 
-.left-bar{
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+}
+
+.left-bar {
     position: relative;
     max-height: 100vh;
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
     padding-right: 1rem !important;
     padding-left: 5rem !important;
 }
 
-.main-icon:hover{
-    background-color: #181818; 
+.main-icon:hover {
+    background-color: #181818;
     border-radius: 2em;
     cursor: pointer;
 }
 
-.custom-nav-link a{
+.custom-nav-link a {
     display: inline-block;
     color: black;
     font-size: 1.3em;
@@ -38,20 +38,20 @@ body {
     line-height: 0 !important;
 }
 
-.custom-nav-link i{
+.custom-nav-link i {
     padding-right: 0.5em;
 }
 
-.profile-bar{
+.profile-bar {
     max-height: 10vh;
 }
 
-.profileImage{
+.profileImage {
     width: 15%;
     height: 15%;
 }
 
-#user_email{
+#user_email {
     color: #A9A9A9;
 }
 
@@ -60,8 +60,9 @@ body {
     font-weight: bold;
 }
 
-.nav-link:hover, .profile-bar:hover {
-    background-color: #181818; 
+.nav-link:hover,
+.profile-bar:hover {
+    background-color: #181818;
     border-radius: 3em;
     color: black;
     cursor: pointer;
@@ -69,10 +70,10 @@ body {
 
 #scrollable-container {
     max-height: 100vh;
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd;
 }
 
-.top-bar{
+.top-bar {
     position: fixed;
     top: 0;
     z-index: 1030;
@@ -82,12 +83,12 @@ body {
     color: white;
 }
 
-.top-section{
+.top-section {
     height: 10.5vh;
     padding: 0 !important;
 }
 
-.top-section a{
+.top-section a {
     height: 100%;
     padding-top: 3vh;
     text-decoration: none;
@@ -99,24 +100,24 @@ body {
 .top-section a:hover,
 .trend:hover,
 .user:hover,
-#show-more:hover{
-    background-color: #202020; 
+#show-more:hover {
+    background-color: #202020;
     cursor: pointer;
 }
 
-.main-body{
+.main-body {
     margin-top: 10vh;
 }
 
-.main-section{
+.main-section {
     padding: 0 !important;
 }
 
-.right-bar{
+.right-bar {
     padding-right: 5rem !important;
 }
 
-#searchMessage{
+#searchMessage {
     background-color: black;
     padding: 2rem;
     border-radius: 0.5em;
@@ -125,7 +126,7 @@ body {
 
 #button-addon2,
 .form-control,
-.form-control::placeholder{
+.form-control::placeholder {
     background-color: black !important;
     color: #A9A9A9 !important;
 }
@@ -134,49 +135,53 @@ body {
     box-shadow: none !important;
 }
 
-.card-title.font-weight-bold{
-    font-weight: 700; 
+.card-title.font-weight-bold {
+    font-weight: 700;
 }
 
-.card, .card-body{
+.card,
+.card-body {
     padding: 0;
-    background-color:#181818 !important;
+    background-color: #181818 !important;
     color: white;
 }
 
-.card-body > h5,
-.card-body > div {
+.card-body>h5,
+.card-body>div {
     padding: 0.7em;
 }
 
 .card-body i:hover {
-    color:rgb(63, 148, 197);
-    background-color: rgb(208, 224, 224); 
+    color: rgb(63, 148, 197);
+    background-color: rgb(208, 224, 224);
     cursor: pointer;
 }
 
-.trend span, i{
+.trend span,
+i {
     color: #A9A9A9;
 }
 
-.text-end span{
+.text-end span {
     color: white;
     font-weight: bolder;
 }
 
-#show-more a{
+#show-more a {
     text-decoration: none;
 }
 
 .footer a,
-.footer span{
+.footer span {
     text-decoration: none;
     font-size: 0.7em;
     color: #A9A9A9;
 }
 
-.footer a:hover{
+.footer a:hover {
     text-decoration: underline;
 }
 
-
+textarea {
+    resize: none;
+}
