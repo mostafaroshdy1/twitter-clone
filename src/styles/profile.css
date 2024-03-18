@@ -144,3 +144,90 @@ main section nav div:hover{
     color: white !important;
     border-bottom: 8px solid #1068b4 ;
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.modal-content {
+    background-color: black;
+    margin-left: 26%;
+    margin-top: 3%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Custom CSS for floating labels */
+.form-floating {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-floating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 0.75rem;
+    pointer-events: none;
+    transition: top 0.3s, left 0.3s, padding 0.3s, opacity 0.3s;
+    opacity: 0.5;
+    color: white; 
+}
+
+.form-control {
+    background-color: transparent;
+    color: white;
+}
+
+.form-control:focus {
+    background-color: black;
+    color: white;
+}
+
+.form-control:focus + label {
+    top: 0.5rem;
+    left: 0.75rem;
+    opacity: 1;
+    padding: 0;
+    height: 0;
+    background-color: black;
+    color: white;
+    
+}
+
+.floating {
+    top: -0.5rem;
+    left: 0.75rem;
+    padding: 0 ;
+    opacity: 1;
+    height: 0;
+}
+
+label{
+    color: white;
+}
