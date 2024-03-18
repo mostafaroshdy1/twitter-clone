@@ -64,7 +64,7 @@ class Post {
         for (let i = 0; i < posts.length; i++) {
             const post = new Post(posts[i].username, posts[i].postText);
             post.create();
-            post.append(postsSection);
+            post.prepend(postsSection);
         }
     }
 }
