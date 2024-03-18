@@ -185,3 +185,12 @@ i {
 textarea {
     resize: none;
 }
+
+.main-body .posts-section .btn {
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.main-body .posts-section .btn:hover {
+    color: #1A8AD6;
+}

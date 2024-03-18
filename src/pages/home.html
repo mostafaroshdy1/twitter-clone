@@ -129,18 +129,18 @@
         </div>
 
         <!-- Lower scrollable bar -->
-        <div class="row main-body ">
+        <div class="row main-body">
             <!-- Main Section -->
-            <div class="col-12 col-md-10 col-lg-7 border main-section">
-                <div class="container mt-4">
+            <div class="col-12 col-md-10 col-lg-7 border   main-section">
+                <div class="mt-4 border-bottom border-dark">
                     <div class="row">
                         <div class="col-1">
                             <img src="../../public/images/user4.jpg" class="img-fluid rounded-circle img-thumbnail"
                                 style="max-width:50px;">
                         </div>
                         <div class="col-10 mt-3 border-bottom border-dark">
-                            <textarea class="form-control fs-5" placeholder="What is happening?!" id="floatingTextarea2"
-                                style="height: 100px"></textarea>
+                            <textarea class="postText form-control fs-5" placeholder="What is happening?!"
+                                id="floatingTextarea2" style="height: 100px"></textarea>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -195,12 +195,50 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-2">
-                                    <div class="btn btn-primary rounded-pill " style="width: 100%;">
+                                <div class="col-2 mb-2 ">
+                                    <div class="btn btn-primary rounded-pill postBtn" style="width: 100%;">
                                         Post
                                     </div>
                                 </div>
-
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posts-section  ">
+                    <div class="post border-bottom border-top border-dark">
+                        <div class="row mt-4">
+                            <div class="col-1">
+                                <img src="../../public/images/user4.jpg" class="img-fluid rounded-circle img-thumbnail"
+                                    style="max-width:40px;">
+                            </div>
+                            <div class="col-10 mt-3">
+                                <p class="fw-bold">UserName</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed architecto repellat
+                                    soluta
+                                    provident minus id, vero, dignissimos aut nisi, consequuntur voluptate a culpa
+                                    cumque
+                                    praesentium commodi laboriosam veniam adipisci consequatur!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex mb-1 flex-column">
+                                <div class="d-flex w-100 sm my-2 justify-content-between">
+                                    <div></div>
+                                    <div class="bi bi-chat btn">
+                                    </div>
+                                    <div class=" bi bi-arrow-repeat btn">
+                                    </div>
+                                    <div class=" bi bi-heart btn">
+                                    </div>
+                                    <div></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -290,14 +328,14 @@
                 <!-- Footer -->
                 <div class="footer text-center">
                     <div class="row d-flex justify-content-end">
-                        <a class="col-4 " href="#">Terms of Service</a>
-                        <a class="col-4 " href="#">Privacy Policy</a>
-                        <a class="col-4 " href="#">Cookie Policy</a>
+                        <a class="col-4" href="#">Terms of Service</a>
+                        <a class="col-4" href="#">Privacy Policy</a>
+                        <a class="col-4" href="#">Cookie Policy</a>
                     </div>
                     <div class="row">
-                        <a class="col-3 " href="#">Accessibility</a>
-                        <a class="col-3 " href="#">Ads info</a>
-                        <a class="col-2 " href="#">More...</a>
+                        <a class="col-3" href="#">Accessibility</a>
+                        <a class="col-3" href="#">Ads info</a>
+                        <a class="col-2" href="#">More...</a>
                         <span class="col-4 ">© 2024 X Corp.</span>
                     </div>
                 </div>
@@ -309,8 +347,9 @@
 
 
     </div>
-
-
     <script src="../scripts/home.js"></script>
+    <script src="../scripts/postCreate.js" type="module"></script>
+
+
 </body>
 </html>

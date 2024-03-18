@@ -1,8 +1,10 @@
 "use strict";
+import { User } from "../scripts/classes/User.js";
 // Get the modal elements
 const createAccountModal = document.getElementById('createAccountModal');
 const loginModal = document.getElementById('loginModal');
 
+const continueLoginBtn = document.querySelector('.continueLoginBtn');
 // Get the button that opens the modal
 const createAccountBtn = document.querySelector('.createAccount');
 const loginBtn = document.querySelector('.login');
@@ -85,6 +87,7 @@ function hideCongratsModal() {
     window.location.href = 'https://mostafaroshdy1.github.io/twitter-clone/index.html';
 }
 
+continueLoginBtn.addEventListener('click', hideCongratsModal);
 
 // Clear the error message when the password field changes
 passwordInput.addEventListener('input', function () {
@@ -122,62 +125,3 @@ loginPassword.addEventListener('input', function () {
 
 
 
-
-class User {
-    #name
-    #password
-    #email
-
-    constructor(name, password, email) {
-        this.name = name;
-        this.password = password;
-        this.email = email;
-    }
-
-    get name() {
-        return this.#name;
-    }
-
-    get password() {
-        return this.#password;
-    }
-
-    get email() {
-        return this.#email;
-    }
-
-    set name(name) {
-        this.#name = name;
-    }
-
-    set password(password) {
-        // Check if the password meets the condition before setting it
-        if (/(?=.*[a-zA-Z]).{9,}/.test(password)) {
-            this.#password = password;
-        } else {
-            throw new Error('Password must contain at least one letter and be at least 9 characters long');
-        }
-    }
-
-    set email(email) {
-        // Check if the email is valid before setting it
-        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            this.#email = email;
-        } else {
-            throw new Error('Invalid email address');
-        }
-    }
-    toJSON() {
-        return {
-            name: this.name,
-            password: this.password,
-            email: this.email
-        };
-    }
-
-    // use User.parse to parse the user from localStorage instead of JSON.parse
-    static parse(json) {
-        const data = JSON.parse(json);
-        return new User(data.name, data.password, data.email);
-    }
-}
