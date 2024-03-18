@@ -5,9 +5,11 @@ import { Post } from "../scripts/classes/Post.js";
 const user = User.parse(localStorage.getItem('user'));
 const postsSection = document.querySelector('.posts-section');
 const postBtn = document.querySelector('.postBtn');
-const posts = Post.parse(localStorage.getItem('posts'))
+if (localStorage.getItem('posts')) {
+    const posts = Post.parse(localStorage.getItem('posts'))
+    Post.restoreAll(posts, postsSection);
+}
 
-Post.restoreAll(posts, postsSection);
 
 function addPost() {
     const postText = document.querySelector('.postText').value;
