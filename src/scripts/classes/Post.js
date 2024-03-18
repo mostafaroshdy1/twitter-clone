@@ -49,4 +49,22 @@ class Post {
     append(element) {
         element.appendChild(this.post);
     }
+
+    static parse(json) {
+        const data = JSON.parse(json);
+        // console.log(data);
+        const posts = []
+        for (let i = 0; i < data.length; i++) {
+            posts.push(new Post(data[i].username, data[i].postText))
+        }
+        return posts;
+    }
+
+    static restoreAll(posts, postsSection) {
+        for (let i = 0; i < posts.length; i++) {
+            const post = new Post(posts[i].username, posts[i].postText);
+            post.create();
+            post.append(postsSection);
+        }
+    }
 }
