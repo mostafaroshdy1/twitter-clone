@@ -15,7 +15,7 @@ function addPost() {
     const postText = document.querySelector('.postText').value;
     const post = new Post(user.name, postText);
     post.create();
-    post.append(postsSection);
+    post.prepend(postsSection);
     if (!localStorage.getItem('posts')) {
         localStorage.setItem('posts', JSON.stringify([post]));
         return;

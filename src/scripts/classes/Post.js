@@ -46,8 +46,8 @@ class Post {
         </div>
     </div>`;
     }
-    append(element) {
-        element.appendChild(this.post);
+    prepend(element) {
+        element.prepend(this.post);
     }
 
     static parse(json) {
