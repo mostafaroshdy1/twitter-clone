@@ -133,7 +133,7 @@
             <!-- Main Section -->
             <div class="col-12 col-md-10 col-lg-7 border   main-section">
                 <div class="mt-4 border-bottom border-dark">
-                    <div class="row">
+                    <div class="row ">
                         <div class="col-1">
                             <img src="../../public/images/user4.jpg" class="img-fluid rounded-circle img-thumbnail"
                                 style="max-width:50px;">
@@ -141,6 +141,14 @@
                         <div class="col-10 mt-3 border-bottom border-dark">
                             <textarea class="postText form-control fs-5" placeholder="What is happening?!"
                                 id="floatingTextarea2" style="height: 100px"></textarea>
+                        </div>
+                        <!-- Container for the image -->
+                        <div id="imageContainer" class="row mt-2 d-none">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <img id="uploadedImage" class="img-fluid rounded" style="max-width: 100%;" src=""
+                                    alt="Uploaded Image">
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -150,17 +158,19 @@
                                 <div class="col-10">
                                     <div
                                         class="d-flex flex-fill align-self-center flex-wrap gap-0 text-primary opacity-75">
-                                        <div class=" rounded-circle me-3" style="width: 25px !important;">
+                                        <label for="fileUpload" class="rounded-circle me-3 uploadImgBtn"
+                                            style="width: 25px !important;">
                                             <svg class="btn" viewBox="0 0 24 24" aria-hidden="true"
-                                                class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-z80fyv r-19wmn03"
                                                 style="color: #1fa5ff;">
-                                                <g fill='#1fa5ff'>
+                                                <g fill="#1fa5ff">
                                                     <path
                                                         d="M3 5.5C3 4.119 4.119 3 5.5 3h13C19.881 3 21 4.119 21 5.5v13c0 1.381-1.119 2.5-2.5 2.5h-13C4.119 21 3 19.881 3 18.5v-13zM5.5 5c-.276 0-.5.224-.5.5v9.086l3-3 3 3 5-5 3 3V5.5c0-.276-.224-.5-.5-.5h-13zM19 15.414l-3-3-5 5-3-3-3 3V18.5c0 .276.224.5.5.5h13c.276 0 .5-.224.5-.5v-3.086zM9.75 7C8.784 7 8 7.784 8 8.75s.784 1.75 1.75 1.75 1.75-.784 1.75-1.75S10.716 7 9.75 7z">
                                                     </path>
                                                 </g>
                                             </svg>
-                                        </div>
+                                        </label>
+                                        <input type="file" id="fileUpload" style="display: none;" accept="image/*">
+
                                         <div class=" rounded-circle me-3" style="width: 25px !important;">
                                             <svg viewBox="0 0 24 24" aria-hidden="true" class="btn"
                                                 style="color: rgb(29, 155, 240);">
@@ -225,6 +235,7 @@
                                     cumque
                                     praesentium commodi laboriosam veniam adipisci consequatur!
                                 </p>
+                                <img class="img-fluid rounded-5" src="../../public/images/GI86Lp3W4AAtN5r.png" alt="">
                             </div>
                         </div>
                         <div class="row">
