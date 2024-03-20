@@ -158,14 +158,17 @@ main section nav div:hover{
 
 .modal-content {
     background-color: black;
-    margin-left: 26%;
-    margin-top: 3%;
+    margin-left: 25%;
+    margin-top: 2%;
     padding: 20px;
     border: 1px solid #888;
     width: 100%;
     max-width: 600px;
+    max-height: 550px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+
 }
 
 .close {
@@ -182,52 +185,128 @@ main section nav div:hover{
     cursor: pointer;
 }
 
-/* Custom CSS for floating labels */
+label{
+    color: white;
+}
+form .profile-header {
+    background-image: url('../../public/Images/1.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 160px;
+    margin-bottom: 70px;
+}
+form .profile-image {
+    position: absolute;
+    top: 170px;
+    left: 8%;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+.buttons label{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background-color: rgba(55, 59, 71, 0.5); 
+    border: none;
+    color: white;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button :hover label{
+    background-color: rgba(90, 96, 112, 0.5); 
+}
+
+#profileImgbtn {
+    top: 200px;
+    left: 14%;
+    
+}
+#profileBgBtn {
+    top: 130px;
+    left: 40%;
+}
+#profileBgbtnDelete {
+    top: 130px;
+    left: 53%;
+}
+form .profile-image img {
+    width: 100px;
+}
+.buttons span{
+    position: absolute;
+    font-size: .7em;
+    padding: .3em;
+    background-color: rgba(67, 77, 102, 0.5);
+    display: none;
+}
+#profileImgbtn:hover + #addPhoto{
+    display: flex;
+    top: 44%;
+    left: 12.5%;
+}
+#profileBgBtn:hover + #addbgPhoto{
+    display: flex;
+    top: 31%;
+    left: 38.5%;
+}
+#profileBgbtnDelete:hover + #removePhoto{
+    display: flex;
+    top: 31%;
+    left: 50%;
+}
+form #addPhoto{
+    position: absolute;
+    font-size: .7em;
+    padding: .3em;
+    background-color: rgba(67, 77, 102, 0.5);
+    top: 39%;
+    left: 12.5%;
+    display: none;
+}
+form #profileBgBtn:hover + span{
+    display: flex;
+}
 .form-floating {
     position: relative;
     margin-bottom: 1rem;
-}
-
-.form-floating label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.5rem 0.75rem;
-    pointer-events: none;
-    transition: top 0.3s, left 0.3s, padding 0.3s, opacity 0.3s;
-    opacity: 0.5;
-    color: white; 
-}
-
-.form-control {
-    background-color: transparent;
-    color: white;
-}
-
-.form-control:focus {
-    background-color: black;
-    color: white;
-}
-
-.form-control:focus + label {
-    top: 0.5rem;
-    left: 0.75rem;
-    opacity: 1;
-    padding: 0;
-    height: 0;
-    background-color: black;
-    color: white;
     
 }
 
-.floating {
-    top: -0.5rem;
-    left: 0.75rem;
-    padding: 0 ;
-    opacity: 1;
-    height: 0;
+.form-floating input {
+    border: none;
+    border: 1px solid #ced4da;
+    outline: none;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+}
+.form-floating input:focus{
+    background-color: black;
+    color: white;
 }
 
-label{
-    color: white;
+.form-floating p {
+    position: absolute;
+    left: 1em;
+    top: 0.5rem;
+    transition: top 0.2s, font-size 0.2s;
+    pointer-events: none;
+    background-color: transparent !important; 
+    transition: background-color 0.2s;
+}
+.form-floating input:focus + p,
+.form-floating input:not(:placeholder-shown) + p {
+    top: 0rem;
+    left: 1em;
+    font-size: 0.75rem;
+    color: #007bff;
+    background-color: black;
+    font-size: .8em;
+
 }
