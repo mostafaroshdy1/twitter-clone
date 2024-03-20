@@ -66,22 +66,61 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 //Create What's happening trends
-function createTrendDivs(count) {
+// function createTrendDivs(count) {
+//     var container = document.getElementById('trends-container');
+//     var beforeElement = document.getElementById('show-more');
+//     for (var i = 0; i < count; i++) {
+//         var div = document.createElement('div');
+//         div.className = 'trend';
+//         div.innerHTML = `
+//             <div class="d-flex justify-content-between align-items-center">
+//                 <span>Trending in Egypt</span>
+//                 <i class="fas fa-ellipsis-h rounded-circle p-1 w-2"></i>
+//             </div>
+//             <div class="text-end">
+//                 <span>أحدث_الأخبار#</span>
+//             </div>`;
+//         container.insertBefore(div, beforeElement);
+//         }
+// }
+
+Promise.all([
+    fetchAndSelectRandomTrend('For You'),
+    fetchAndSelectRandomTrend('Trending'),
+    fetchAndSelectRandomTrend('News'),
+    fetchAndSelectRandomTrend('Sports'),
+    fetchAndSelectRandomTrend('Entertainment')
+])
+.then(results => {
     var container = document.getElementById('trends-container');
     var beforeElement = document.getElementById('show-more');
-    for (var i = 0; i < count; i++) {
+    results.forEach(trend => {
         var div = document.createElement('div');
         div.className = 'trend';
         div.innerHTML = `
-            <div class="d-flex justify-content-between align-items-center">
-                <span>Trending in Egypt</span>
-                <i class="fas fa-ellipsis-h rounded-circle p-1 w-2"></i>
-            </div>
-            <div class="text-end">
-                <span>أحدث_الأخبار#</span>
-            </div>`;
+        <div class="d-flex justify-content-between align-items-center">
+            <span>Trending in ${trend.trend_location}</span>
+            <i class="fas fa-ellipsis-h rounded-circle p-1 w-2"></i>
+        </div>
+        <div class="text-end">
+            <span>${trend.trend_name} #</span>
+        </div>`;
         container.insertBefore(div, beforeElement);
-        }
+    });
+})
+.catch(error => {
+    console.error('Error fetching Trends data:', error);
+});
+
+function fetchAndSelectRandomTrend(category) {
+
+    return fetch(`../../public/json/explore.json`)
+        .then(response => response.json())
+        .then(data => {
+            // Select a random trend from the data
+            const randomIndex = Math.floor(Math.random() * data.length);
+            return data[randomIndex];
+        });
 }
 
 // Call the function to generate 5 instances of the HTML structure before a specific div with id "specificDiv"
