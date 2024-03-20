@@ -4,6 +4,7 @@ class Post {
     post;
     username;
     postText;
+    imgUrl;
     constructor(username, postText) {
         this.username = username;
         this.postText = postText
@@ -29,6 +30,8 @@ class Post {
             <p>
                 ${this.postText}
             </p>
+            <img class="img-fluid rounded-5"
+            src=${this.imgUrl} alt="">
         </div>
     </div>
     <div class="row">
@@ -46,8 +49,8 @@ class Post {
         </div>
     </div>`;
     }
-    append(element) {
-        element.appendChild(this.post);
+    prepend(element) {
+        element.prepend(this.post);
     }
 
     static parse(json) {
@@ -55,7 +58,9 @@ class Post {
         // console.log(data);
         const posts = []
         for (let i = 0; i < data.length; i++) {
-            posts.push(new Post(data[i].username, data[i].postText))
+            const post = new Post(data[i].username, data[i].postText)
+            post.imgUrl = data[i].imgUrl;
+            posts.push(post)
         }
         return posts;
     }
@@ -63,8 +68,9 @@ class Post {
     static restoreAll(posts, postsSection) {
         for (let i = 0; i < posts.length; i++) {
             const post = new Post(posts[i].username, posts[i].postText);
+            post.imgUrl = posts[i].imgUrl;
             post.create();
-            post.append(postsSection);
+            post.prepend(postsSection);
         }
     }
 }
