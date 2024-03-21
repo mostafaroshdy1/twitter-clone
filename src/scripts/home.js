@@ -57,6 +57,7 @@ function updateProfileBar() {
         const emailParts = userData.email.split('@');
         const username = '@' + emailParts[0];
         document.getElementById('user_email').innerText = username;
+        document.getElementById('user_email_bookmark').innerText = username;
     }
 }
 

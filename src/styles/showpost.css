@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   font-family: "Poppins", sans-serif;
-}
+} */
 
 body {
   background-color: black;
@@ -87,6 +87,7 @@ header {
   height: 30%;
   padding-top: 150px;
 }
+
 .item-category i:hover{
   color:white;
   transition-duration: 0.2s;
@@ -363,6 +364,9 @@ padding: 10px;
   padding: 5px 20px;
   border-radius: 25px;
 }
+
+
+
 
 
 

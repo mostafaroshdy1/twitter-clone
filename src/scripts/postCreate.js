@@ -11,9 +11,9 @@ const postBtn = document.querySelector('.postBtn');
 const imageContainer = document.getElementById('imageContainer');
 if (localStorage.getItem('posts')) {
     const posts = Post.parse(localStorage.getItem('posts'))
+    console.log('Hello',posts);
     Post.restoreAll(posts, postsSection);
 }
-
 
 async function addPost() {
     const postText = document.querySelector('.postText').value;

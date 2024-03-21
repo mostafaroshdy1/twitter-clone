@@ -200,3 +200,7 @@ textarea {
 .trends-container {
     border-radius: 25px;
 }
+
+.bookmarked{
+    color: blue;
+}

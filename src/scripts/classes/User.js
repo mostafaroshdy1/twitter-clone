@@ -5,11 +5,13 @@ class User {
     #password
     #email
     #img
+    #bookmarks 
 
     constructor(name, password, email) {
         this.name = name;
         this.password = password;
         this.email = email;
+        this.#bookmarks = [];
     }
 
     get name() {
@@ -29,6 +31,14 @@ class User {
     // to be implemented by Nada
     // set img() {
     // }
+
+    get bookmarks() {
+        return this.#bookmarks;
+    }
+
+    addBookmark(post) {
+        this.#bookmarks.push(post);
+    }
 
     set name(name) {
         this.#name = name;
@@ -55,7 +65,8 @@ class User {
         return {
             name: this.name,
             password: this.password,
-            email: this.email
+            email: this.email,
+            bookmarks: this.bookmarks
         };
     }
 
@@ -63,6 +74,8 @@ class User {
     static parse(json) {
         const data = JSON.parse(json);
         const user = new User(data.name, data.password, data.email);
+
+        user.#bookmarks = data.bookmarks || [];
 
         // user.img = data.img; // after the img is been implemented by Nada
 
