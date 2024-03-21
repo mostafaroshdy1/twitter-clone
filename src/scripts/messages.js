@@ -137,3 +137,63 @@ for (let i = 0; i < contacts.length; i++) {
     updateChat(element.dataset.user);
   });
 }
+// Emoji data - you can expand this with more emojis if needed
+const emojis = ["😊", "😂", "😍", "😎", "👍", "👋", "❤️", "🔥", "🎉", "🌟"];
+
+// Function to create emoji picker UI
+function createEmojiPicker() {
+  const emojiPicker = document.createElement("div");
+  emojiPicker.classList.add("emoji-picker");
+
+  emojis.forEach((emoji) => {
+    const emojiButton = document.createElement("button");
+    emojiButton.classList.add("emoji-option");
+    emojiButton.innerText = emoji;
+    emojiButton.addEventListener("click", function () {
+      insertEmoji(emoji);
+      closeEmojiPicker();
+    });
+    emojiPicker.appendChild(emojiButton);
+  });
+
+  return emojiPicker;
+}
+
+// Function to insert emoji into the message input field
+function insertEmoji(emoji) {
+  const messageInput = document.querySelector(
+    '.chat-message input[type="text"]'
+  );
+  const cursorPos = messageInput.selectionStart;
+  const textBeforeCursor = messageInput.value.substring(0, cursorPos);
+  const textAfterCursor = messageInput.value.substring(cursorPos);
+  messageInput.value = textBeforeCursor + emoji + textAfterCursor;
+  // Optionally, you can move the cursor position after inserting the emoji
+  messageInput.selectionStart = cursorPos + emoji.length;
+  messageInput.selectionEnd = cursorPos + emoji.length;
+  messageInput.focus();
+}
+
+// Function to toggle the emoji picker visibility
+function toggleEmojiPicker() {
+  const emojiPicker = document.querySelector(".emoji-picker");
+  if (!emojiPicker) {
+    const chatMessage = document.querySelector(".chat-message");
+    chatMessage.appendChild(createEmojiPicker());
+  } else {
+    closeEmojiPicker();
+  }
+}
+
+// Function to close the emoji picker
+function closeEmojiPicker() {
+  const emojiPicker = document.querySelector(".emoji-picker");
+  if (emojiPicker) {
+    emojiPicker.remove();
+  }
+}
+
+// Add event listener to the emoji picker button
+document
+  .querySelector(".chat-message .emoji-picker-btn")
+  .addEventListener("click", toggleEmojiPicker);
