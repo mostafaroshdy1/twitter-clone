@@ -139,11 +139,13 @@ body {
     font-weight: 700;
 }
 
+
 .card,
 .card-body {
     padding: 0;
     background-color: #181818 !important;
     color: white;
+    border-radius: 15px;
 }
 
 .card-body>h5,
@@ -193,4 +195,8 @@ textarea {
 
 .main-body .posts-section .btn:hover {
     color: #1A8AD6;
+}
+
+.trends-container {
+    border-radius: 25px;
 }
