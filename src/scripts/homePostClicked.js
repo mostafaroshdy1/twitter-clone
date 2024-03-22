@@ -1,42 +1,38 @@
 import { Post } from "./classes/Post.js";
-
+export { postId };
 const postsSection = document.querySelector('.posts-section');
 const postSection = document.querySelector('.post-section'); // used for the show page
-const interactionsBar = document.querySelector('.interactions');
-console.log(interactionsBar)
+let replyBtn;
 let postId = null;
+let restored = false;
+
 document.addEventListener('click', (e) => {
+    const commentBtn = document.querySelectorAll('.commentBtn');
     console.log(e.target);
-    if (!postsSection.contains(e.target) || interactionsBar.contains(e.target)) {
+
+    if (!Array.from(commentBtn).includes(e.target) || restored) {
         return;
     }
-    let closestElement = null;
-    let minDistance = Number.MAX_SAFE_INTEGER;
-
-    // Iterate through the children of postsSection
-    for (const child of postsSection.children) {
-        // Get the bounding box of the child element
-        const rect = child.getBoundingClientRect();
-
-        // Calculate the distance of the click from the center of the child element
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const distance = Math.sqrt(Math.pow(e.clientX - centerX, 2) + Math.pow(e.clientY - centerY, 2));
-
-        // Update closestElement if this child is closer than the previous closest one
-        if (distance < minDistance) {
-            minDistance = distance;
-            closestElement = child;
-        }
-    }
-
-    // Log or use closestElement
-    postId = closestElement.classList[0];
-    console.log("Post Id:", postId);
+    commentBtn.forEach(btn => btn.classList.toggle('commentBtn'));
+    const clickedCommentBtn = Array.from(commentBtn).find(btn => btn == e.target);
+    postId = clickedCommentBtn.classList[0];
+    console.log(postId);
     const posts = Post.parse(localStorage.getItem('posts'))
     // localStorage.setItem('locationY', window.scrollY);
     Post.show(posts, postId, postSection);
     window.scrollTo(0, 1);
+    replyBtn = document.querySelector('.replyBtn');
+    let post;
+    for (let i = 0; i < posts.length; i++) {
+        if (posts[i].id == postId) {
+            post = posts[i];
+            break;
+        }
+    }
+
+    Post.restoreComments(post.comments, postSection);
+    restored = true;
+
 });
 
 document.addEventListener('click', (e) => {
@@ -129,6 +125,31 @@ document.addEventListener('click', (e) => {
         //     </div>
         // </div>`)
     }
+
 })
 
 
+
+document.addEventListener('click', (e) => {
+    if (replyBtn.id !== e.target.id) {
+        return
+    }
+    const commentText = document.querySelector(".commentText")
+
+    const posts = Post.parse(localStorage.getItem('posts'));
+    let post;
+    let i = 0;
+    for (; i < posts.length; i++) {
+        if (posts[i].id == postId) {
+            post = posts[i]
+            break;
+        }
+    }
+    post.comment(commentText.value, JSON.parse(localStorage.getItem('user')).name);
+    posts[i] = post;
+    localStorage.setItem('posts', JSON.stringify(posts));
+    // console.log([post.comments[post.comments.length - 1]]);
+    Post.restoreComments([post.comments[post.comments.length - 1]], postSection);
+    commentText.value = "";
+
+})

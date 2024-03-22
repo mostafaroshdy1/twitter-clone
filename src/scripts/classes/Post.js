@@ -8,12 +8,14 @@ class Post {
     postText;
     imgUrl;
     id;
+    comments;
 
     constructor(username, postText, id) {
         this.id = id++;
         this.username = username;
         this.postText = postText
         this.post = document.createElement('div');
+        this.comments = [];
     }
     create() {
         this.post.classList.add(this.id);
@@ -22,7 +24,7 @@ class Post {
         this.post.classList.add('border-bottom');
         this.post.classList.add('border-dark');
         // this.post.classList.add('clickable');
-        this.post.innerHTML = ` <div class="clickable">
+        this.post.innerHTML = ` <div>
         <div class="row mt-4">
         <div class="col-1">
             <img src="../../public/images/user4.jpg" class="img-fluid rounded-circle img-thumbnail" style="max-width:40px;">
@@ -31,11 +33,11 @@ class Post {
             <p class="fw-bold">${this.username}</p>
         </div>
     </div>
-    <div class="row">
+    <div class="row ">
         <div class="col-1"></div>
-        <div class="col-10">
+        <div class="col-10 d-flex justify-content-center flex-column">
             <p>${this.postText}</p>
-            <img class="img-fluid rounded-5" src="${this.imgUrl}" alt="">
+            <img class="img-fluid rounded-5 ms-4 post-img" src="${this.imgUrl}" style="max-width: 600px; max-height: 600px;" alt="">
         </div>
     </div>
     </div>
@@ -43,7 +45,7 @@ class Post {
         <div class="d-flex mb-1 flex-column">
             <div class="d-flex w-100 sm my-2 justify-content-between">
                 <div></div>
-                <div class="bi bi-chat btn"></div>
+                <div class="${this.id} bi bi-chat btn commentBtn"></div>
                 <div class=" bi bi-arrow-repeat btn"></div>
                 <div class=" bi bi-heart btn"></div>
                 <div class="bi bi-bookmark btn"></div>
@@ -139,6 +141,7 @@ class Post {
         for (let i = 0; i < data.length; i++) {
             const post = new Post(data[i].username, data[i].postText, data[i].id)
             post.imgUrl = data[i].imgUrl;
+            post.comments = data[i].comments;
             posts.push(post)
         }
         return posts;
@@ -146,14 +149,14 @@ class Post {
 
     static restoreAll(posts, postsSection) {
         for (let i = 0; i < posts.length; i++) {
-            // const post = new Post(posts[i].username, posts[i].postText);
-            // post.imgUrl = posts[i].imgUrl;
-            posts[i].create();
-            posts[i].prepend(postsSection);
+            const post = new Post(posts[i].username, posts[i].postText);
+            post.imgUrl = posts[i].imgUrl;
+            post.id = posts[i].id;
+            post.create();
+            post.prepend(postsSection);
         }
     }
     static show(posts, id, postSection) {
-        console.log(posts);
 
         for (let i = 0; i < posts.length; i++) {
             if (posts[i].id == id) {
@@ -169,8 +172,53 @@ class Post {
                     </div>
                 </div>
             `);
+                postSection.innerHTML += `
+                <div class="row mt-3 border-bottom border-dark">
+                <div class="col-9"> <!-- Adjust the width of the column accordingly -->
+                    <div class="mb-3 d-flex align-items-start">
+                        <img src="../../public/images/user4.jpg"
+                            class="img-fluid rounded-circle img-thumbnail mr-3" style="max-width:40px;">
+                        <div class="flex-grow-1">
+                            <textarea class="form-control commentText fs-5" placeholder="Post your Reply"
+                                id="floatingTextarea2" style="height: 40px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3"> <!-- Adjust the width of the column accordingly -->
+                    <button type="button" id="replied" class="btn btn-primary rounded-pill replyBtn">Reply</button>
+                </div>
+            </div>
+        `;
             }
         }
-    }
 
+    }
+    comment(comment, username) {
+        const commentTemp = `<div class="ms-0 p-0 border-bottom border-dark border-top">
+        <div class="row mt-4">
+            <div class="col-1">
+                <img src="../../public/images/user4.jpg"
+                    class="img-fluid rounded-circle img-thumbnail" style="max-width:40px;">
+            </div>
+            <div class="col-10 mt-3">
+                <p class="fw-bold">${username}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <p>
+                    ${comment}
+                </p>
+            </div>
+
+        </div>
+    </div>`
+        this.comments.push(commentTemp);
+    }
+    static restoreComments(comments, postSection) {
+        for (let i = 0; i < comments.length; i++) {
+            postSection.insertAdjacentHTML("afterend", comments[i]);
+        }
+    }
 }
