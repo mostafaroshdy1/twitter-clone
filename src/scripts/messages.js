@@ -1,92 +1,78 @@
 let contacts = document.getElementsByClassName("contact");
 let messageContainer = document.getElementById("messages-container");
+let sideFeedTitle = document.querySelector(".side-feed .title h4");
+let sideFeedPics = document.querySelectorAll(".side-feed img");
+let data = [];
 
-let data = [
-  {
-    user: "test",
-    chat: [
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste repellendus dolore magni veniam asperiores iusto illum illo",
-        stat: "sent",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste repellendus dolore magni veniam asperiores iusto illum illo",
-        stat: "recived",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste repellendus dolore magni veniam asperiores iusto illum illo",
-        stat: "sent",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste repellendus dolore magni veniam asperiores iusto illum illo",
-        stat: "recived",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste repellendus dolore magni veniam asperiores iusto illum illo",
-        stat: "sent",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste repellendus dolore magni veniam asperiores iusto illum illo",
-        stat: "recived",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste repellendus dolore magni veniam asperiores iusto illum illo",
-        stat: "sent",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste repellendus dolore magni veniam asperiores iusto illum illo",
-        stat: "recived",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste repellendus dolore magni veniam asperiores iusto illum illo",
-        stat: "sent",
-        date: "Apr 2, 2018 9:36PM",
-      },
-    ],
-  },
-  {
-    user: "user",
-    chat: [
-      {
-        content: "Lorem um illo",
-        stat: "sent",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content: "Lorem ipsum, doriores iusto illum illo",
-        stat: "recived",
-        date: "Apr 2, 2018 9:36PM",
-      },
-      {
-        content:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit.speriores iusto illum illo",
-        stat: "sent",
-        date: "Apr 2, 2018 9:36PM",
-      },
-    ],
-  },
-  {
-    user: "empty",
-    chat: [],
-  },
-];
+function fetchMessages() {
+  fetch("../../public/json/messages.json")
+    .then((res) => res.json())
+    .then((json) => {
+      data = json;
+      // console.log(data);
+      createChatHtml(data);
+    });
+}
+
+fetchMessages();
+
+function fetchContacts() {
+  fetch("../../public/json/contacts.json")
+    .then((res) => res.json())
+    .then((json) => {
+      json.sort(() => Math.random() - 0.5);
+      const selectedContacts = json.slice(0, 3);
+
+      const contactsContainer = document.getElementById("contacts-container");
+      contactsContainer.innerHTML = "";
+
+      // Create contact cards for each selected contact
+      selectedContacts.forEach((contact) => {
+        const contactElement = document.createElement("div");
+        contactElement.classList.add("contact");
+        contactElement.dataset.user = contact.user;
+        contactElement.dataset.name = contact.name;
+
+        const img = document.createElement("img");
+        img.src = contact.profileImage;
+        img.alt = "profile";
+
+        const contactDetails = document.createElement("div");
+        contactDetails.classList.add("contact-detailes");
+
+        const header = document.createElement("div");
+        header.classList.add("header");
+
+        const name = document.createElement("h4");
+        name.textContent = contact.name;
+
+        const verifiedIcon = document.createElement("img");
+        verifiedIcon.src = contact.verifiedIcon;
+        verifiedIcon.alt = "account-status";
+
+        const handle = document.createElement("span");
+        handle.textContent = `@${contact.handle}`;
+
+        const paragraph = document.createElement("p");
+        paragraph.textContent = contact.message;
+
+        header.appendChild(name);
+        header.appendChild(verifiedIcon);
+        header.appendChild(handle);
+
+        contactDetails.appendChild(header);
+        contactDetails.appendChild(paragraph);
+
+        contactElement.appendChild(img);
+        contactElement.appendChild(contactDetails);
+
+        contactsContainer.appendChild(contactElement);
+        console.log(contactElement);
+      });
+    });
+}
+
+fetchContacts();
 
 function createChatHtml(data) {
   // if data empty
@@ -100,7 +86,7 @@ function createChatHtml(data) {
   }
   data.chat.forEach((chatData) => {
     let message = document.createElement("div");
-    let messageState = chatData.stat == "sent" ? "sent" : "recived";
+    let messageState = chatData.stat == "sent" ? "sent" : "received";
     message.classList.add(messageState, "message");
     let body = document.createElement("p");
     body.innerText = chatData.content;
@@ -121,22 +107,33 @@ let removeClass = (htmlCollection, classToRemove) => {
 
 function updateChat(user) {
   let targetData = {};
-  data.forEach((e) => {
-    if (e.user == user) {
-      targetData = e;
+  data.forEach((chatData) => {
+    if (chatData.user == user) {
+      targetData = chatData;
     }
   });
   createChatHtml(targetData);
 }
 
-for (let i = 0; i < contacts.length; i++) {
-  const element = contacts[i];
-  element.addEventListener("click", () => {
-    removeClass(contacts, "active");
-    element.classList.add("active");
-    updateChat(element.dataset.user);
-  });
+function updateImageData() {
+  for (let i = 0; i < sideFeedPics.length; i++) {
+    const element = sideFeedPics[i];
+    element.style.display = "block";
+  }
 }
+
+setTimeout(() => {
+  for (let i = 0; i < contacts.length; i++) {
+    const element = contacts[i];
+    element.addEventListener("click", () => {
+      updateImageData();
+      sideFeedTitle.innerText = element.dataset.name;
+      removeClass(contacts, "active");
+      element.classList.add("active");
+      updateChat(element.dataset.user);
+    });
+  }
+}, 1000);
 // Emoji data - you can expand this with more emojis if needed
 const emojis = ["😊", "😂", "😍", "😎", "👍", "👋", "❤️", "🔥", "🎉", "🌟"];
 
@@ -168,7 +165,6 @@ function insertEmoji(emoji) {
   const textBeforeCursor = messageInput.value.substring(0, cursorPos);
   const textAfterCursor = messageInput.value.substring(cursorPos);
   messageInput.value = textBeforeCursor + emoji + textAfterCursor;
-  // Optionally, you can move the cursor position after inserting the emoji
   messageInput.selectionStart = cursorPos + emoji.length;
   messageInput.selectionEnd = cursorPos + emoji.length;
   messageInput.focus();

@@ -1,0 +1,50 @@
+[
+  {
+    "user": "john_doe",
+    "profileImage": "https://placehold.co/400",
+    "name": "John Doe",
+    "verifiedIcon": "../../public/svg/verified-check-svgrepo-com.svg",
+    "handle": "john_doe",
+    "message": "Hey, have you seen the latest episode of that show we've been watching?"
+  },
+  {
+    "user": "samantha_wilson",
+    "profileImage": "https://placehold.co/400",
+    "name": "Samantha Wilson",
+    "verifiedIcon": "../../public/svg/verified-check-svgrepo-com.svg",
+    "handle": "samantha_wilson",
+    "message": "Hey Sam, do you have any recommendations for a good hiking trail nearby?"
+  },
+  {
+    "user": "michael_thompson",
+    "profileImage": "https://placehold.co/400",
+    "name": "Michael Thompson",
+    "verifiedIcon": "../../public/svg/verified-check-svgrepo-com.svg",
+    "handle": "michael_thompson",
+    "message": "Hey Michael, I wanted to follow up on that project proposal we discussed last week."
+  },
+  {
+    "user": "emily_davis",
+    "profileImage": "https://placehold.co/400",
+    "name": "Emily Davis",
+    "verifiedIcon": "../../public/svg/verified-check-svgrepo-com.svg",
+    "handle": "emily_davis",
+    "message": "Hey Emily, are you still planning on going to that concert next month?"
+  },
+  {
+    "user": "david_brown",
+    "profileImage": "https://placehold.co/400",
+    "name": "David Brown",
+    "verifiedIcon": "../../public/svg/verified-check-svgrepo-com.svg",
+    "handle": "david_brown",
+    "message": "Hey David, I wanted to check in about our upcoming project deadline."
+  },
+  {
+    "user": "sarah_thompson",
+    "profileImage": "https://placehold.co/400",
+    "name": "Sarah Thompson",
+    "verifiedIcon": "../../public/svg/verified-check-svgrepo-com.svg",
+    "handle": "sarah_thompson",
+    "message": "Hey Sarah, I wanted to run something by you."
+  }
+]
