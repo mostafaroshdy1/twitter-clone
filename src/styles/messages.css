@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 10px;
+  /* font-size: 10px; */
   font-family: "Poppins", sans-serif;
 }
 
@@ -15,15 +15,15 @@ body {
   background-color: black;
 }
 
-a {
+/* a {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 24px;
-}
+} */
 
-header {
+/* header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,9 +31,9 @@ header {
   width: 29%;
   height: 100%;
   position: fixed;
-}
+} */
 
-.nav-links {
+/* .nav-links {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -67,7 +67,7 @@ header {
 
 .nav-links a:first-child i {
   margin: 0;
-}
+} */
 
 .tweet-btn {
   background-color: rgb(29, 155, 240);
@@ -132,7 +132,11 @@ header {
 main {
   width: 71%;
   height: 100%;
-  margin-left: 29%;
+  /* margin-left: 29%; */
+}
+
+main *{
+  font-size: 15px !important;
 }
 
 .main-flex {
