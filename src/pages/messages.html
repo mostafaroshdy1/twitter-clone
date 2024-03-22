@@ -34,8 +34,8 @@
     <link rel="stylesheet" href="../styles/home.css" />
     <title>Messages / X</title>
   </head>
-  <body>
-    <header>
+  <body class="container-fluid row">
+    <!-- <header>
       <div class="nav-links">
         <a href="#">
           <svg
@@ -96,41 +96,166 @@
           <i class="material-icons-outlined">more_horiz</i>
         </a>
       </div>
-    </header>
+    </header> -->
 
-    <main>
-      <div class="main-flex">
-        <div class="main-feed col-md-6">
-          <div class="home">
-            <div class="home-top">
-              <div class="message-header">
-                <h4>Messages</h4>
+    <!-- Left Section -->
+    <div id="scrollable-container" class="col-12 col-md-2 col-lg-3  px-0 px-lg-5 overflow-auto left-bar">
+
+      <!-- Twitter Icon -->
+      <div class="main-icon p-3 d-flex justify-content-center col-3" onclick="iconHomeClicked()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x"
+              viewBox="0 0 16 16">
+              <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+          </svg>
+      </div>
+
+      <!-- Nav bar -->
+      <nav class="nav flex-column custom-nav-link " bs-nav-link-color="black">
+          <div>
+              <a class="nav-link p-3 active " aria-current="page" href="home.html">
+                  <i class="fa-solid fa-house"></i>
+                  <span class="d-none d-lg-inline">Home</span>
+              </a>
+          </div>
+          <div>
+              <a class="nav-link p-3" href="#">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <span class="d-none d-lg-inline">Explore</span>
+              </a>
+          </div>
+          <div>
+              <a class="nav-link p-3" href="#">
+                  <i class="fa-solid fa-bell"></i>
+                  <span class="d-none d-lg-inline">Notifications</span>
+              </a>
+          </div>
+          <div>
+              <a class="nav-link p-3" href="#">
+                  <i class="fa-regular fa-envelope"></i>
+                  <span class="d-none d-lg-inline">Messages</span>
+              </a>
+          </div>
+          <div>
+              <a class="nav-link p-3" href="#">
+                  <i class="fa-regular fa-rectangle-list"></i>
+                  <span class="d-none d-lg-inline">Lists</span>
+              </a>
+          </div>
+          <div>
+              <a class="nav-link p-3" href="#">
+                  <i class="fa-brands fa-x-twitter"></i>
+                  <span class="d-none d-lg-inline">Premium</span>
+              </a>
+          </div>
+          <div>
+              <a class="nav-link p-3" href="#">
+                  <i class="fa-regular fa-user"></i>
+                  <span class="d-none d-lg-inline">Profile</span>
+              </a>
+          </div>
+          <div>
+              <a class="nav-link p-3" href="#">
+                  <i class="fas fa-ellipsis-h"></i>
+                  <span class="d-none d-lg-inline">More</span>
+              </a>
+          </div>
+      </nav>
+
+      <!-- Post button -->
+      <div class="d-grid gap-2 m-2 ">
+          <button class="btn btn-primary rounded-5 p-2 fs-5 fw-bold" type="button">Post</button>
+      </div>
+
+      <!-- Profile Bar -->
+      <div class="profile-bar p-3 mt-5 d-lg-flex justify-content-between d-none align-items-center">
+          <div class="d-flex justify-content-start align-items-center">
+              <img class="img-fluid rounded-circle profileImage" alt="Profile Image">
+              <div class="px-3">
+                  <div id="user_name"></div>
+                  <div id="user_email"></div>
               </div>
-              <div class="message-icons">
-                <i class="material-icons-outlined">settings</i>
-                <i class="material-icons-outlined">send</i>
+          </div>
+          <i class="fas fa-ellipsis-h"></i>
+      </div>
+    </div>
+    
+    <div id="scrollable-container" class="row col-12 col-md-10 col-lg-9 overflow-auto">
+      <main>
+        <div class="main-flex">
+          <div class="main-feed col-md-6">
+            <div class="home">
+              <div class="home-top">
+                <div class="message-header">
+                  <h4>Messages</h4>
+                </div>
+                <div class="message-icons">
+                  <i class="material-icons-outlined">settings</i>
+                  <i class="material-icons-outlined">send</i>
+                </div>
               </div>
-            </div>
-            <div class="home-top">
-              <div class="search-home">
-                <i class="material-icons-outlined">search</i>
-                <input type="text" placeholder="Search Direct Messages" />
+              <div class="home-top">
+                <div class="search-home">
+                  <i class="material-icons-outlined">search</i>
+                  <input type="text" placeholder="Search Direct Messages" />
+                </div>
               </div>
-            </div>
-            <div class="message-requests">
-              <div>
-                <img
-                  src="../../public/svg/mail-forward-svgrepo-com.svg"
-                  width="24px"
-                  height="24px"
-                />
+              <div class="message-requests">
+                <div>
+                  <img
+                    src="../../public/svg/mail-forward-svgrepo-com.svg"
+                    width="24px"
+                    height="24px"
+                  />
+                </div>
+                <p>Message requests</p>
               </div>
-              <p>Message requests</p>
-            </div>
-            <div class="contacts" id="contacts-container">
+              <div class="contacts">
+                <div class="contact" data-user="user">
+                  <img src="https://placehold.co/400" alt="profile" />
+                  <div class="contact-detailes">
+                    <div class="header">
+                      <h4>Made by Google</h4>
+                      <img
+                        src="../../public/svg/verified-check-svgrepo-com.svg"
+                        alt="account-status"
+                      />
+                      <span>@madebygoogle.Apr 2, 2018</span>
+                    </div>
+                    <p>Email address for support?</p>
+                  </div>
+                </div>
+                <div class="contact" data-user="empty">
+                  <img src="https://placehold.co/400" alt="profile" />
+                  <div class="contact-detailes">
+                    <div class="header">
+                      <h4>Made by Google</h4>
+                      <img
+                        src="../../public/svg/verified-check-svgrepo-com.svg"
+                        alt="account-status"
+                      />
+                      <span>@madebygoogle.Apr 2, 2018</span>
+                    </div>
+                    <p>Email address for support?</p>
+                  </div>
+                </div>
+                <div class="contact" data-user="test">
+                  <img src="https://placehold.co/400" alt="profile" />
+                  <div class="contact-detailes">
+                    <div class="header">
+                      <h4>Made by Google</h4>
+                      <img
+                        src="../../public/svg/verified-check-svgrepo-com.svg"
+                        alt="account-status"
+                      />
+                      <span>@madebygoogle.Apr 2, 2018</span>
+                    </div>
+                    <p>Email address for support?</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
           <div class="side-feed">
             <div class="header">
@@ -179,53 +304,6 @@
         </div>
       </main>
     </div>
-        <div class="side-feed">
-          <div class="header">
-            <img src="https://placehold.co/400" alt="profile" id="profile" style="display: none;"/>
-            <div class="title">
-              <h4>Select a conversation</h4>
-              <img
-                id="account-status"
-                src="../../public/svg/verified-check-svgrepo-com.svg"
-                alt="account-status"
-                style="display: none;"
-              />
-            </div>
-            <div class="info">
-              <img
-                id="Info"
-                src="../../public/svg/info-circle-svgrepo-com.svg"
-                alt="Info"
-              />
-            </div>
-          </div>
-          <div class="chat-box">
-            <div class="messages-box" id="messages-container"></div>
-            <di class="chat-message">
-              <button>
-                <img
-                src="../../public/svg/image-picture-svgrepo-com.svg"
-                alt=""
-                />
-              </button>
-              <button>
-                <img src="../../public/svg/gif-svgrepo-com.svg" alt="" />
-              </button>
-                <button class="emoji-picker-btn">
-                  <img
-                  src="../../public/svg/emoji-smile-svgrepo-com.svg"
-                  alt=""
-                  />
-                </button>
-                <input type="text" placeholder="Start a new message" />
-                <button>
-                  <img src="../../public/svg/send-alt-1-svgrepo-com.svg" alt="" />
-                </button>
-              </div>
-          </div>
-        </div>
-      </div>
-    </main>
 
     <script src="../scripts/messages.js"></script>
   </body>
