@@ -30,6 +30,7 @@ body {
     cursor: pointer;
 }
 
+
 .custom-nav-link a {
     display: inline-block;
     color: black;
@@ -51,6 +52,7 @@ body {
     height: 15%;
 }
 
+
 #user_email {
     color: #A9A9A9;
 }
@@ -69,7 +71,7 @@ body {
 }
 
 #scrollable-container {
-    max-height: 100vh;
+    /* max-height: 100vh; */
     border: 1px solid #ddd;
 }
 
@@ -188,19 +190,23 @@ textarea {
     resize: none;
 }
 
-.main-body .posts-section .btn {
+.main-body .post-section .btn {
     color: white;
     transition: background-color 0.3s ease;
 }
 
-.main-body .posts-section .btn:hover {
-    color: #1A8AD6;
+.main-body .post-section .btn:hover {
+    color: #1A8AD6 !important;
 }
 
 .trends-container {
     border-radius: 25px;
 }
 
-.bookmarked{
+.bookmarked {
     color: blue;
+}
+
+.clickable {
+    cursor: pointer;
 }

@@ -14,7 +14,7 @@
     <!-- Link external CSS file -->
     <link rel="stylesheet" href="../styles/showpost.css" />
     <link rel="stylesheet" href="../styles/home.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
 
 </head>
 <body class="container-fluid d-flex">
@@ -23,16 +23,18 @@
     <div class="col-12 col-md-2 col-lg-3  px-0 px-lg-5 overflow-auto left-bar">
 
         <!-- Twitter Icon -->
-        <div class="main-icon p-3 d-flex justify-content-center col-3"  onclick="iconHomeClicked()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+        <div class="main-icon p-3 d-flex justify-content-center col-3" onclick="iconHomeClicked()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x"
+                viewBox="0 0 16 16">
+                <path
+                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
             </svg>
         </div>
 
         <!-- Nav bar -->
         <nav class="nav flex-column custom-nav-link " bs-nav-link-color="black">
             <div>
-                <a class="nav-link p-3 active " aria-current="page" href="home.html"> 
+                <a class="nav-link p-3 active " aria-current="page" href="home.html">
                     <i class="fa-solid fa-house"></i>
                     <span class="d-none d-lg-inline">Home</span>
                 </a>
@@ -62,7 +64,7 @@
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#"> 
+                <a class="nav-link p-3" href="#">
                     <i class="fa-brands fa-x-twitter"></i>
                     <span class="d-none d-lg-inline">Premium</span>
                 </a>
@@ -80,19 +82,19 @@
                 </a>
             </div>
         </nav>
-          
+
         <!-- Post button -->
-          <div class="d-grid gap-2 m-2 ">
+        <div class="d-grid gap-2 m-2 ">
             <button class="btn btn-primary rounded-5 p-2 fs-5 fw-bold" type="button">Post</button>
         </div>
-        
+
         <!-- Profile Bar -->
-          <div class="profile-bar p-3 mt-5 d-lg-flex justify-content-between d-none align-items-center">
+        <div class="profile-bar p-3 mt-5 d-lg-flex justify-content-between d-none align-items-center">
             <div class="d-flex justify-content-start align-items-center">
                 <img class="img-fluid rounded-circle profileImage" alt="Profile Image">
                 <div class="px-3">
-                   <div id="user_name"></div>
-                   <div id="user_email"></div>
+                    <div id="user_name"></div>
+                    <div id="user_email"></div>
                 </div>
             </div>
             <i class="fas fa-ellipsis-h"></i>
@@ -102,84 +104,36 @@
     <!-- Middle Section -->
     <main class="col-12 col-md-10 col-lg-9 m-0">
         <div class="main-flex">
-          <div class="main-feed col-lg-7 border" >
-            <div class="home">
-                <div class="back-button">
-                    <i class="material-icons-outlined">arrow_back</i>                
-                </div>
-                <div class="title-post">
-                    <p>Post</p>
-                </div>
-            </div>
-            <!-- Posts Start -->
-            <div class="feed-tweet">
-                <div class="feed-tweet-details">
-                    <div class="tweeter-details">
-                        <div class="user-details" style="padding-left: 0px;">
-                            <img src="../../public/images/user4.jpg" class="tweet-img" />
-                            <a href="" class="tweeter-name">
-                                Ziad Elganzory
-                                <span class="tweeter-handel">@ganzury__</span>
-                                <span class="tweet-time">. 1h</span>
-                            </a>    
-                        </div>
-                        <i class="material-icons-outlined">more_horiz</i>
+            <div class="main-feed col-lg-7 border">
+                <div class="home">
+                    <div class="back-button">
+                        <i class="material-icons-outlined">arrow_back</i>
                     </div>
-                    <div class="tweet-text">
-                        <p>Post Placeholder Caption</p>
-                    </div>
-                        <div class="tweet-post-img">
-                            <img src="../../public/images/GI86Lp3W4AAtN5r.png" alt="Post-Image">
-                        </div>
-                    <div class="tweet-icons border-top border-bottom">
-                        <div class="comment">
-                            <div>
-                                <i class="material-icons-outlined">chat_bubble_outline</i>
-                                <p>4</p>
-                            </div>
-                        </div>
-                        <div class="retweet">
-                            <i class="material-icons-outlined">restart_alt</i>
-                            <p>4</p>
-                        </div>
-                        <div class="like">
-                            <i class="material-icons-outlined">favorite_border</i>
-                            <p>4</p>
-                        </div>
-                        <div class="analysis">
-                            <i class="material-icons-outlined">equalizer</i>
-                            <p>4</p>
-                        </div>
-                        <div class="bookmark">
-                            <i class="material-icons-outlined">bookmark_border</i>
-                        </div>
-                        <div class="share">
-                            <i class="material-icons-outlined">upload</i>
-                        </div>
+                    <div class="title-post">
+                        <p>Post</p>
                     </div>
                 </div>
-                <div class="post-comment">
-                            <div>
-                                <img src="../../public/images/user4.jpg" class="img-fluid tweet-img" />
-                                <input type="text" placeholder="Post your comment">
-                            </div>
-                            <div class="post-button">
-                                <button>Reply</button>
-                            </div>
-                    </div>
-                <div class="comments border-top">
+                <!-- Posts Start -->
+                <div class="feed-tweet">
                     <div class="feed-tweet-details">
                         <div class="tweeter-details">
                             <div class="user-details" style="padding-left: 0px;">
                                 <img src="../../public/images/user4.jpg" class="tweet-img" />
-                                <a href="" class="tweeter-name">Ziad Elganzory<span class="tweeter-handel">@ganzury__</span><span class="tweet-time">. 1h</span></a>    
+                                <a href="" class="tweeter-name">
+                                    Ziad Elganzory
+                                    <span class="tweeter-handel">@ganzury__</span>
+                                    <span class="tweet-time">. 1h</span>
+                                </a>
                             </div>
                             <i class="material-icons-outlined">more_horiz</i>
                         </div>
                         <div class="tweet-text">
-                            <p>This is a comment</p>
+                            <p>Post Placeholder Caption</p>
                         </div>
-                        <div class="tweet-icons">
+                        <div class="tweet-post-img">
+                            <img src="../../public/images/GI86Lp3W4AAtN5r.png" alt="Post-Image">
+                        </div>
+                        <div class="tweet-icons border-top border-bottom">
                             <div class="comment">
                                 <div>
                                     <i class="material-icons-outlined">chat_bubble_outline</i>
@@ -206,107 +160,162 @@
                             </div>
                         </div>
                     </div>
+                    <div class="post-comment">
+                        <div>
+                            <img src="../../public/images/user4.jpg" class="img-fluid tweet-img" />
+                            <input type="text" placeholder="Post your comment">
+                        </div>
+                        <div class="post-button">
+                            <button>Reply</button>
+                        </div>
+                    </div>
+                    <div class="comments border-top">
+                        <div class="feed-tweet-details">
+                            <div class="tweeter-details">
+                                <div class="user-details" style="padding-left: 0px;">
+                                    <img src="../../public/images/user4.jpg" class="tweet-img" />
+                                    <a href="" class="tweeter-name">Ziad Elganzory<span
+                                            class="tweeter-handel">@ganzury__</span><span class="tweet-time">.
+                                            1h</span></a>
+                                </div>
+                                <i class="material-icons-outlined">more_horiz</i>
+                            </div>
+                            <div class="tweet-text">
+                                <p>This is a comment</p>
+                            </div>
+                            <div class="tweet-icons">
+                                <div class="comment">
+                                    <div>
+                                        <i class="material-icons-outlined">chat_bubble_outline</i>
+                                        <p>4</p>
+                                    </div>
+                                </div>
+                                <div class="retweet">
+                                    <i class="material-icons-outlined">restart_alt</i>
+                                    <p>4</p>
+                                </div>
+                                <div class="like">
+                                    <i class="material-icons-outlined">favorite_border</i>
+                                    <p>4</p>
+                                </div>
+                                <div class="analysis">
+                                    <i class="material-icons-outlined">equalizer</i>
+                                    <p>4</p>
+                                </div>
+                                <div class="bookmark">
+                                    <i class="material-icons-outlined">bookmark_border</i>
+                                </div>
+                                <div class="share">
+                                    <i class="material-icons-outlined">upload</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
+                <!-- Trends End -->
             </div>
 
 
-            <!-- Trends End -->
-          </div>
-  
-          
-        <!-- Right Section -->
-        <div class="d-none d-lg-block col-lg-5 right-bar">
+            <!-- Right Section -->
+            <div class="d-none d-lg-block col-lg-5 right-bar">
 
-            <!-- Subscribe to Premium Card -->
+                <!-- Subscribe to Premium Card -->
                 <div class="card m-2 bg-light rounded-3">
-                <div class="card-body m-2 ">
-                    <h4 class="card-title font-weight-bold">Subscribe to Premium</h4>
-                    <p class="card-text col-11">Subscribe to unlock new features and if eligible, receive a share of ads revenue.</p>
-                    <a href="#" class="btn btn-primary rounded-5">Subscribe</a>
-                </div>
+                    <div class="card-body m-2 ">
+                        <h4 class="card-title font-weight-bold">Subscribe to Premium</h4>
+                        <p class="card-text col-11">Subscribe to unlock new features and if eligible, receive a share of
+                            ads revenue.</p>
+                        <a href="#" class="btn btn-primary rounded-5">Subscribe</a>
+                    </div>
                 </div>
 
-            <!-- What’s happening Card -->
-            <div class="card m-2 bg-light">
-                <div id="trends-container" class="card-body">
-                    <h5 class="card-title font-weight-bold">What's happening</h5>
-                    <!-- Updated Trends -->
-                    <div id="show-more"><a href="#" >Show more</a></div>
-                  </div>
+                <!-- What’s happening Card -->
+                <div class="card m-2 bg-light">
+                    <div id="trends-container" class="card-body">
+                        <h5 class="card-title font-weight-bold">What's happening</h5>
+                        <!-- Updated Trends -->
+                        <div id="show-more"><a href="#">Show more</a></div>
+                    </div>
+                </div>
+
+                <!-- Who to follow Card -->
+                <div class="card m-2 bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Who to follow</h5>
+
+                        <div class="d-flex justify-content-between align-items-center user">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img src="../../public/images/user1.jpg" class="img-fluid rounded-circle profileImage"
+                                    alt="Profile Image">
+                                <div class="px-3">
+                                    <div id="user_name">Mostafa Roshdy</div>
+                                    <div id="user_email">@mostafa.roshdy</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-light rounded-5">Follow</a>
+                        </div>
+
+
+                        <div class="d-flex justify-content-between align-items-center user">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img src="../../public/images/user2.jpg" class="img-fluid rounded-circle profileImage"
+                                    alt="Profile Image">
+                                <div class="px-3">
+                                    <div id="user_name">Nada Rabea</div>
+                                    <div id="user_email">@nada.rabea</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-light rounded-5">Follow</a>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center user">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img src="../../public/images/user3.jpg" class="img-fluid rounded-circle profileImage"
+                                    alt="Profile Image">
+                                <div class="px-3">
+                                    <div id="user_name">Mohamed Hossny</div>
+                                    <div id="user_email">@mohamed.hossny</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-light rounded-5">Follow</a>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center user">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img src="../../public/images/user4.jpg" class="img-fluid rounded-circle profileImage"
+                                    alt="Profile Image">
+                                <div class="px-3">
+                                    <div id="user_name">Ziad Elganzory</div>
+                                    <div id="user_email">@ziad.elganzory</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-light rounded-5">Follow</a>
+                        </div>
+
+                        <div id="show-more"><a href="#">Show more</a></div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="footer text-center">
+                    <div class="row d-flex justify-content-end">
+                        <a class="col-4 " href="#">Terms of Service</a>
+                        <a class="col-4 " href="#">Privacy Policy</a>
+                        <a class="col-4 " href="#">Cookie Policy</a>
+                    </div>
+                    <div class="row">
+                        <a class="col-3 " href="#">Accessibility</a>
+                        <a class="col-3 " href="#">Ads info</a>
+                        <a class="col-2 " href="#">More...</a>
+                        <span class="col-4 ">© 2024 X Corp.</span>
+                    </div>
+                </div>
+
             </div>
-
-             <!-- Who to follow Card -->
-             <div class="card m-2 bg-light">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Who to follow</h5>
-
-                    <div class="d-flex justify-content-between align-items-center user">
-                        <div class="d-flex justify-content-start align-items-center">
-                            <img src="../../public/images/user1.jpg" class="img-fluid rounded-circle profileImage" alt="Profile Image">
-                            <div class="px-3">
-                               <div id="user_name">Mostafa Roshdy</div>
-                               <div id="user_email">@mostafa.roshdy</div>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-light rounded-5">Follow</a>
-                    </div>
-
-
-                    <div class="d-flex justify-content-between align-items-center user">
-                        <div class="d-flex justify-content-start align-items-center">
-                            <img src="../../public/images/user2.jpg" class="img-fluid rounded-circle profileImage" alt="Profile Image">
-                            <div class="px-3">
-                               <div id="user_name">Nada Rabea</div>
-                               <div id="user_email">@nada.rabea</div>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-light rounded-5">Follow</a>
-                    </div>
-
-                    <div class="d-flex justify-content-between align-items-center user">
-                        <div class="d-flex justify-content-start align-items-center">
-                            <img src="../../public/images/user3.jpg" class="img-fluid rounded-circle profileImage" alt="Profile Image">
-                            <div class="px-3">
-                               <div id="user_name">Mohamed Hossny</div>
-                               <div id="user_email">@mohamed.hossny</div>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-light rounded-5">Follow</a>
-                    </div>
-
-                    <div class="d-flex justify-content-between align-items-center user">
-                        <div class="d-flex justify-content-start align-items-center">
-                            <img src="../../public/images/user4.jpg" class="img-fluid rounded-circle profileImage" alt="Profile Image">
-                            <div class="px-3">
-                               <div id="user_name">Ziad Elganzory</div>
-                               <div id="user_email">@ziad.elganzory</div>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-light rounded-5">Follow</a>
-                    </div>
-
-                    <div id="show-more"><a href="#" >Show more</a></div>
-                  </div>
-            </div>
-
-             <!-- Footer -->
-             <div class="footer text-center">
-                <div class="row d-flex justify-content-end">
-                    <a class="col-4 " href="#">Terms of Service</a>
-                    <a class="col-4 " href="#">Privacy Policy</a>
-                    <a class="col-4 " href="#">Cookie Policy</a>
-                </div>
-                <div class="row">
-                    <a class="col-3 " href="#">Accessibility</a>
-                    <a class="col-3 " href="#">Ads info</a>
-                    <a class="col-2 " href="#">More...</a>
-                    <span class="col-4 ">© 2024 X Corp.</span>
-                </div>
-             </div>
-
         </div>
-        </div>
-      </main>
+    </main>
 
     <script src="../scripts/home.js"></script>
     <script src="../scripts/explore.js"></script>

@@ -11,15 +11,18 @@ const postBtn = document.querySelector('.postBtn');
 const imageContainer = document.getElementById('imageContainer');
 if (localStorage.getItem('posts')) {
     const posts = Post.parse(localStorage.getItem('posts'))
-    console.log('Hello',posts);
+    console.log('Hello', posts);
     Post.restoreAll(posts, postsSection);
 }
 
 async function addPost() {
     const postText = document.querySelector('.postText').value;
-    const post = new Post(user.name, postText);
+    const id = JSON.parse(localStorage.getItem('posts')) ? JSON.parse(localStorage.getItem('posts')).length++ : 0;
+    const post = new Post(user.name, postText, id);
     if (postImage) {
         post.imgUrl = await uploadImage(postImage);
+        imageContainer.classList.toggle('d-none'); // to hide the image
+
     }
     post.create();
     post.prepend(postsSection);
@@ -32,7 +35,6 @@ async function addPost() {
     postsArray.push(post);
     localStorage.setItem('posts', JSON.stringify(postsArray));
     document.querySelector('.postText').value = ''; // to clear the text
-    imageContainer.classList.toggle('d-none'); // to hide the image
 
 }
 
