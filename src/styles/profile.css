@@ -3,32 +3,41 @@ body {
     color: white;
 }
 
-nav {
-    font-size: 1.2em;
-}
+/* nav {
+    font-size: 1.3em;
+} */
 
 nav a {
-    text-decoration: none;
-    color: rgb(214, 202, 202);
+    display: inline-block;
+    color: black;
+    font-size: 1.3em;
+    transition: border 0.5s ease, font-weight 0.3s ease;
+    line-height: 0 !important;
+    margin-bottom: 0;
+}
+
+nav i {
+    padding-right: 0.5em;
 }
 
 header a {
-    font-size: 1.8em;
+    font-size: 1.3em;
     color: white;
 }
+
 nav div div {
     color: white;
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
 }
 
 nav div div:hover,
 nav header div:hover,
 nav footer section:hover {
-        background-color: #302f29;
+    background-color: #302f29;
 }
 
 .btn-custom {
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
     color: #ffffff;
     background-color: #157fdb;
     border-color: #157fdb;
@@ -67,22 +76,24 @@ nav footer {
 }
 main header{
     line-height: 1.2;
-    font-size: 1em;
-    
+    /* font-size: 1em; */
 }
 #no-posts{
     color: rgb(139, 130, 130);
-    font-size: .8em;
+    /* font-size: .8em; */
 }
 main header div:first-child:hover{
     background-color: #302f29;
 }
+
 .profile-header {
+    position: relative;
     background-image: url('../../public/Images/1.jpeg');
     background-size: cover;
     background-position: center;
     height: 200px;
 }
+
 .profile-image {
     position: absolute;
     top: 180px;
@@ -90,9 +101,11 @@ main header div:first-child:hover{
     border: 5px solid black;
     border-radius: 50%;
 }
+
 .profile-image img {
     width: 130px;
 }
+
 .button{
     background-color: black;
     color: white;
@@ -137,13 +150,15 @@ main section nav div:hover{
     
 }
 .nav-link{
-    font-size: .9em !important;
+    /* font-size: .9em !important; */
 }
-.nav-link.active {
+
+/* .nav-link.active {
     font-weight: bold;
     color: white !important;
     border-bottom: 8px solid #1068b4 ;
-}
+} */
+
 .modal {
     display: none;
     position: fixed;
@@ -168,7 +183,10 @@ main section nav div:hover{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: auto;
+}
 
+.modal-content button{
+    color: black;
 }
 
 .close {
@@ -258,6 +276,7 @@ form .profile-image img {
     top: 31%;
     left: 50%;
 }
+
 form #addPhoto{
     position: absolute;
     font-size: .7em;
@@ -285,7 +304,9 @@ form #profileBgBtn:hover + span{
     font-size: 1rem;
     background-color: transparent;
     color: white;
+    border-color: white !important;
 }
+
 .form-floating input:focus{
     background-color: black;
     color: white;
