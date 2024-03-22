@@ -1,0 +1,78 @@
+body{
+    background-color: black;
+    color: white; 
+    overflow-x: hidden;
+
+}
+main{
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    height: 100vh;
+
+}
+header{
+    display: flex;
+    justify-self: space-between;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid rgb(211, 186, 186);
+}
+.tab-content{
+    display: none;
+}
+.tab-content.active {
+    display: block;
+    
+}
+.nav-link:hover{
+    background-color: #302f29;
+}
+.nav-link{
+    font-size: .9em !important;
+    padding: .5em !important;
+    color: 302f29 ;
+}
+.nav-link.active {
+    font-weight: bold;
+    color: white !important;
+    border-bottom: 8px solid #1068b4 ;
+}
+.tabs{
+    border-bottom: 1px solid rgb(202, 175, 175);
+}
+#verified div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fa-solid{
+    font-size: 1.5em;
+}
+.fa-star{
+    color: yellow;
+}
+.fa-user{
+    color: rgb(10, 126, 235);
+}
+.fa-heart{
+    color: red;
+}
+#all .row{
+    border-bottom: 1px solid rgb(68, 71, 73);
+    padding: 10px;
+}
+#all img{
+    width: 30px;
+}
+#all span,
+#all p{
+    color: rgb(139, 129, 129);
+}
+.mention{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+
+}
