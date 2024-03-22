@@ -1,3 +1,6 @@
+import { User } from "./classes/User.js";
+import { Post } from "./classes/Post.js";
+
 let contacts = document.getElementsByClassName("contact");
 let messageContainer = document.getElementById("messages-container");
 let sideFeedTitle = document.querySelector(".side-feed .title h4");
@@ -67,7 +70,7 @@ function fetchContacts() {
         contactElement.appendChild(contactDetails);
 
         contactsContainer.appendChild(contactElement);
-        console.log(contactElement);
+        // console.log(contactElement);
       });
     });
 }
@@ -193,3 +196,68 @@ function closeEmojiPicker() {
 document
   .querySelector(".chat-message .emoji-picker-btn")
   .addEventListener("click", toggleEmojiPicker);
+
+// Fetch image from API
+function fetchImage() {
+  fetch("https://picsum.photos/150/150")
+    .then((response) => response.blob())
+    .then((blob) => {
+      // Convert blob to base64 for localStorage
+      const reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onloadend = () => storeImage(reader.result);
+    })
+    .catch((error) => console.error(error));
+}
+// Store image in localStorage
+function storeImage(dataURI) {
+  localStorage.setItem("imageUrl", dataURI);
+}
+if (!localStorage.getItem("imageUrl")) {
+  fetchImage();
+}
+
+//Dummy Data
+storeUserData(
+  localStorage.getItem("imageUrl"),
+  User.parse(localStorage.getItem("user")).name,
+  User.parse(localStorage.getItem("user")).email
+);
+
+// Function to store user data in local storage
+function storeUserData(imageUrl, name, email) {
+  localStorage.setItem("userImage", imageUrl);
+  localStorage.setItem("userName", name);
+  localStorage.setItem("userEmail", email);
+}
+
+// Function to retrieve user data from local storage and create user object
+function getUserData() {
+  const imageUrl = localStorage.getItem("userImage");
+  const name = localStorage.getItem("userName");
+  const email = localStorage.getItem("userEmail");
+
+  return {
+    imageUrl: imageUrl,
+    name: name,
+    email: email,
+  };
+}
+
+// Function to update profile bar with user data
+function updateProfileBar() {
+  const userData = getUserData();
+  if (userData) {
+    document.querySelector(".profileImage").src = userData.imageUrl;
+    document.getElementById("user_name").innerText = userData.name;
+    // Extracting the username part from the email
+    const emailParts = userData.email.split("@");
+    const username = "@" + emailParts[0];
+    document.getElementById("user_email").innerText = username;
+  }
+}
+
+// Call the updateProfileBar function to fill the data initially
+document.addEventListener("DOMContentLoaded", function () {
+  updateProfileBar();
+});
