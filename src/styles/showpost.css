@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0 10px 13%;
+  width: 29%;
+  height: 100%;
+  position: fixed;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70%;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  padding: 8px 25px 8px 8px;
+  width: fit-content;
+}
+
+.nav-links a i {
+  margin-right: 15px;
+}
+
+.nav-links a:hover,
+.main-account a:hover {
+  background-color: rgb(47, 51, 54);
+  border-radius: 9999px;
+  transition-duration: 0.2s;
+}
+
+.nav-links a:first-child {
+  padding: 8px 8px;
+}
+
+.nav-links a:first-child i {
+  margin: 0;
+}
+
+.tweet-btn {
+  background-color: rgb(29, 155, 240);
+  width: 90%;
+  height: 55px;
+  border-radius: 9999px;
+  margin-top: 15px;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  border: 0px;
+  transition-duration: 0.2s;
+}
+
+.tweet-btn:hover {
+  background-color: rgba(29, 155, 240, 0.9);
+}
+
+.main-account {
+  width: 100%;
+  height: 30%;
+  padding-top: 150px;
+}
+.item-category i:hover{
+  color:white;
+  transition-duration: 0.2s;
+}
+
+.main-account a {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px 8px 15px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.tweet-img {
+  width: 2.5em;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.account-details {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
+  margin-left: 10px;
+  line-height: 20px;
+}
+
+.account-name {
+  font-weight: 500;
+}
+
+.account-handel {
+  color: rgb(110, 118, 125);
+}
+
+main {
+  height: 100vh; /* Set a fixed height */
+  overflow-y: auto; /* Enable scrolling */
+  margin-left: 29%;
+}
+
+.main-flex {
+  display: flex;
+  width: 100%;
+}
+
+.main-feed {
+  border-left: 1px solid rgb(41, 51, 54);
+  border-right: 1px solid rgb(41, 51, 54);
+}
+
+.home {
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  border-bottom: 1px solid rgb(41, 51, 54);
+  display: flex;
+  height: 55px;
+  padding: 20px 0 53px 20px;
+}
+
+.back-button {
+  margin-right: 50px;
+  padding-top: 3px;
+}
+
+.feed-tweet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100px;
+  border-top: 1px solid rgb(41, 51, 54);
+  border-bottom: 1px solid rgb(41, 51, 54);
+  cursor: pointer;
+}
+
+.feed-tweet-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 12px 16px 0 30px;
+}
+
+.comments .feed-tweet-details:hover {
+  background-color: #202020;
+}
+
+.feed-tweet i {
+  color: rgb(110, 115, 125);
+}
+
+.tweeter-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.tweeter-details a {
+  font-weight: 700;
+}
+
+.tweeter-details span {
+  color: rgb(110, 115, 125);
+  font-weight: 400;
+  margin-left: 3px;
+}
+
+.tweeter-details i {
+  padding-right: 50px;
+}
+
+.tweeter-details .tweeter-handel:hover,.tweeter-details i:hover{
+  color:white;
+  transition-duration: 0.2s;
+}
+
+.tweet-text {
+  color: white;
+  width: 90%;
+  padding: 10px 0 0 45px;
+}
+.tweet-post-img {
+  width: 100%;
+  max-width: 520px; 
+  margin: 10px 0 10px 0; 
+}
+
+.tweet-post-img img {
+  width: 100%; /* Ensure the image fills its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.tweet-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 15px 0;
+  align-items: center;
+  border-color: rgb(110, 115, 125) !important;
+}
+
+.tweet-icons div{
+  display: flex;
+  width: 70px;
+}
+
+.icon-tweet,.comment ,.retweet,.like,.analysis,.bookmark,.share{
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.icon-tweet,.comment ,.retweet,.like,.analysis,.bookmark,.share{
+  padding: 10px;
+  align-items: center;
+}
+
+.tweet-icons p{
+  color: rgb(110, 115, 125);
+  padding-left: 1px;
+  margin-bottom: 0;
+}
+
+.comment div{
+  align-items: center;
+}
+
+.comment i,
+.comment p,
+.retweet i,
+.retweet p,
+.like i,
+.like p,
+.analysis i,
+.analysis p,
+.bookmark i,
+.bookmark p,
+.share i,
+.share p {
+  padding: 0 5px ;
+}
+
+.comment:hover {
+  background-color: rgba(28, 136, 210, 0.2);
+  transition-duration: 0.2s;
+}
+
+.comment:hover i,
+.comment:hover p {
+  color: #1c88d2;
+  transition-duration: 0.2s;
+}
+
+.retweet:hover {
+  background-color: rgba(0, 201, 167,0.1);
+  transition-duration: 0.2s;
+}
+
+.retweet:hover i,
+.retweet:hover p {
+  transition-duration: 0.2s;
+  color: #00c9a7;
+}
+
+.like:hover {
+  background-color: rgba(138, 1, 64,0.1);
+  transition-duration: 0.2s;
+}
+
+.like:hover i,
+.like:hover p {
+  transition-duration: 0.2s;
+  color:  #e8006c ;
+}
+
+.analysis:hover {
+  background-color: rgba(28, 136, 210, 0.1);
+  transition-duration: 0.2s;
+}
+
+.analysis:hover i,
+.analysis:hover p {
+  transition-duration: 0.2s;
+  color: #1c88d2;
+}
+
+.bookmark:hover {
+  background-color: rgba(28, 136, 210, 0.1);
+  transition-duration: 0.2s;
+}
+
+.bookmark:hover i,
+.bookmark:hover p {
+  transition-duration: 0.2s;
+  color: #1c88d2;
+}
+
+.share:hover {
+  background-color: rgba(28, 136, 210, 0.1);
+  transition-duration: 0.2s;
+}
+
+.share:hover i,
+.share:hover p {
+  transition-duration: 0.2s;
+  color: #1c88d2;
+}
+
+.post-comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 35px 16px 30px;
+}
+
+.post-comment input {
+  background-color: black;
+  border: none;
+  padding-left: 15px;
+}
+
+.post-comment button {
+  background-color: #1c88d2;
+  border: none;
+  align-items: center;
+  padding: 5px 20px;
+  border-radius: 25px;
+}
+
+.comments{
+  border-color: rgb(110, 115, 125) !important;
+}
+
+
+
+
+
+
+
+
