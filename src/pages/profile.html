@@ -13,298 +13,299 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/profile.css">
-    <link rel="shortcut icon" type="icon" href="../../public/svg/x-twitter.svg"/>
+    <link rel="shortcut icon" type="icon" href="../../public/svg/x-twitter.svg" />
 </head>
 
 <body>
     <div class="container-fluid row">
-    <!-- Left Section -->
-    <div id="scrollable-container" class="col-12 col-md-2 col-lg-3  px-0 px-lg-5 overflow-auto left-bar">
+        <!-- Left Section -->
+        <div id="scrollable-container" class="col-12 col-md-2 col-lg-3  px-0 px-lg-5 overflow-auto left-bar">
 
-        <!-- Twitter Icon -->
-        <div class="main-icon p-3 d-flex justify-content-center col-3" onclick="iconHomeClicked()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x"
-                viewBox="0 0 16 16">
-                <path
-                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
-            </svg>
-        </div>
+            <!-- Twitter Icon -->
+            <div class="main-icon p-3 d-flex justify-content-center col-3" onclick="iconHomeClicked()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                </svg>
+            </div>
 
-        <!-- Nav bar -->
-        <nav class="nav flex-column custom-nav-link " bs-nav-link-color="black">
-            <div>
-                <a class="nav-link p-3 active " aria-current="page" href="home.html">
-                    <i class="fa-solid fa-house"></i>
-                    <span class="d-none d-lg-inline">Home</span>
-                </a>
-            </div>
-            <div>
-                <a class="nav-link p-3" href="#">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <span class="d-none d-lg-inline">Explore</span>
-                </a>
-            </div>
-            <div>
-                <a class="nav-link p-3" href="#">
-                    <i class="fa-solid fa-bell"></i>
-                    <span class="d-none d-lg-inline">Notifications</span>
-                </a>
-            </div>
-            <div>
-                <a class="nav-link p-3" href="#">
-                    <i class="fa-regular fa-envelope"></i>
-                    <span class="d-none d-lg-inline">Messages</span>
-                </a>
-            </div>
-            <div>
-                <a class="nav-link p-3" href="#">
-                    <i class="fa-regular fa-rectangle-list"></i>
-                    <span class="d-none d-lg-inline">Lists</span>
-                </a>
-            </div>
-            <div>
-                <a class="nav-link p-3" href="#">
-                    <i class="fa-brands fa-x-twitter"></i>
-                    <span class="d-none d-lg-inline">Premium</span>
-                </a>
-            </div>
-            <div>
-                <a class="nav-link p-3" href="./profile.html">
-                    <i class="fa-regular fa-user"></i>
-                    <span class="d-none d-lg-inline">Profile</span>
-                </a>
-            </div>
-            <div>
-                <a class="nav-link p-3" href="#">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <span class="d-none d-lg-inline">More</span>
-                </a>
-            </div>
-        </nav>
-
-        <!-- Post button -->
-        <div class="d-grid gap-2 m-2 ">
-            <button class="btn btn-primary rounded-5 p-2 fs-5 fw-bold" type="button">Post</button>
-        </div>
-
-        <!-- Profile Bar -->
-        <div class="profile-bar p-3 mt-5 d-lg-flex justify-content-between d-none align-items-center">
-            <div class="d-flex justify-content-start align-items-center">
-                <img class="img-fluid rounded-circle profileImage" alt="Profile-Image">
-                <div class="px-3">
-                    <div id="user_name"></div>
-                    <div id="user_email"></div>
-                </div>
-            </div>
-            <i class="fas fa-ellipsis-h"></i>
-        </div>
-    </div>
-
-    <!-- Middle Section -->
-
-    <div id="scrollable-container" class="row col-12 col-md-10 col-lg-9 overflow-auto">
-        <main class="col-12 col-md-10 col-lg-7 border main-section">
-            <header class="row col-12 my-2">
-                <div class="col-1 rounded-circle px-3 mx-2">
-                    <a href="#">
-                        <i class="fa-solid fa-arrow-left back"></i>
+            <!-- Nav bar -->
+            <nav class="nav flex-column custom-nav-link " bs-nav-link-color="black">
+                <div>
+                    <a class="nav-link p-3 active " aria-current="page" href="home.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="d-none d-lg-inline">Home</span>
                     </a>
                 </div>
-                <div class="col-lg-10">
-                    <span><b>ندى</b></span><br />
-                    <span id="no-posts">333 posts</span>
+                <div>
+                    <a class="nav-link p-3" href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span class="d-none d-lg-inline">Explore</span>
+                    </a>
                 </div>
-            </header>
-            <section class="mt-4">
-                <div class="profile-header"></div>
-                <div class="container mt-3">
-                    <div class="row">
-                        <div class="col-9">
-                            <div class="profile-image mx-4">
-                                <img src="../../public/Images/3.jpeg" class="rounded-circle" alt="Profile Image">
+                <div>
+                    <a class="nav-link p-3" href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="d-none d-lg-inline">Notifications</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="nav-link p-3" href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span class="d-none d-lg-inline">Messages</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="nav-link p-3" href="#">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                        <span class="d-none d-lg-inline">Lists</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="nav-link p-3" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span class="d-none d-lg-inline">Premium</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="nav-link p-3" href="./profile.html">
+                        <i class="fa-regular fa-user"></i>
+                        <span class="d-none d-lg-inline">Profile</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="nav-link p-3" href="#">
+                        <i class="fas fa-ellipsis-h"></i>
+                        <span class="d-none d-lg-inline">More</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Post button -->
+            <div class="d-grid gap-2 m-2 ">
+                <button class="btn btn-primary rounded-5 p-2 fs-5 fw-bold" type="button">Post</button>
+            </div>
+
+            <!-- Profile Bar -->
+            <div class="profile-bar p-3 mt-5 d-lg-flex justify-content-between d-none align-items-center">
+                <div class="d-flex justify-content-start align-items-center">
+                    <img class="img-fluid rounded-circle profileImage" alt="Profile-Image">
+                    <div class="px-3">
+                        <div id="user_name"></div>
+                        <div id="user_email"></div>
+                    </div>
+                </div>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+
+        <!-- Middle Section -->
+
+        <div id="scrollable-container" class="row col-12 col-md-10 col-lg-9 overflow-auto">
+            <main class="col-12 col-md-10 col-lg-7 border main-section">
+                <header class="row col-12 my-2">
+                    <div class="col-1 rounded-circle px-3 mx-2">
+                        <a href="#">
+                            <i class="fa-solid fa-arrow-left back"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-10">
+                        <span><b>ندى</b></span><br />
+                        <span id="no-posts">333 posts</span>
+                    </div>
+                </header>
+                <section class="mt-4">
+                    <div class="profile-header"></div>
+                    <div class="container mt-3">
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="profile-image mx-4">
+                                    <img src="../../public/Images/3.jpeg" class="rounded-circle" alt="Profile Image">
+                                </div>
                             </div>
+                            <div class="col-3">
+                                <button class="button rounded-5 p-2 px-3" id="openModal">Edit Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="row mx-1">
+                    <div id="user-details-main">
+                        <span id="username-main">ندى</span>
+                        <span>@nadarabea81</span>
+                    </div>
+                    <div id="bio"></div>
+                    <div class="row my-2">
+                        <div class="col-4">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Alexandria,Egypt</span>
+                        </div>
+                        <div class="col-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-balloon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 9.984C10.403 9.506 12 7.48 12 5a4 4 0 0 0-8 0c0 2.48 1.597 4.506 4 4.984M13 5c0 2.837-1.789 5.227-4.52 5.901l.244.487a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.244-.487C4.789 10.227 3 7.837 3 5a5 5 0 0 1 10 0m-6.938-.495a2 2 0 0 1 1.443-1.443C7.773 2.994 8 2.776 8 2.5s-.226-.504-.498-.459a3 3 0 0 0-2.46 2.461c-.046.272.182.498.458.498s.494-.227.562-.495" />
+                            </svg>
+                            <span>Born June 27, 2001</span>
+                        </div>
+                        <div class="col-4">
+                            <i class="fa-regular fa-calendar-days"></i>
+                            <span>Joined May 2021</span>
+                        </div>
+                    </div>
+                    <div class="row col-12">
+                        <div class="col-3">
+                            <span style="color: white;"><b>22</b></span>
+                            <span>Following</span>
                         </div>
                         <div class="col-3">
-                            <button class="button rounded-5 p-2 px-3" id="openModal">Edit Profile</button>
+                            <span style="color: white;"><b>22</b></span>
+                            <span>Followers</span>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="row mx-1">
-                <div id="user-details-main">
-                    <span id="username-main">ندى</span>
-                    <span>@nadarabea81</span>
-                </div>
-                <div id="bio"></div>
-                <div class="row my-2">
-                    <div class="col-4">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Alexandria,Egypt</span>
-                    </div>
-                    <div class="col-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-balloon" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M8 9.984C10.403 9.506 12 7.48 12 5a4 4 0 0 0-8 0c0 2.48 1.597 4.506 4 4.984M13 5c0 2.837-1.789 5.227-4.52 5.901l.244.487a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.244-.487C4.789 10.227 3 7.837 3 5a5 5 0 0 1 10 0m-6.938-.495a2 2 0 0 1 1.443-1.443C7.773 2.994 8 2.776 8 2.5s-.226-.504-.498-.459a3 3 0 0 0-2.46 2.461c-.046.272.182.498.458.498s.494-.227.562-.495" />
-                        </svg>
-                        <span>Born June 27, 2001</span>
-                    </div>
-                    <div class="col-4">
-                        <i class="fa-regular fa-calendar-days"></i>
-                        <span>Joined May 2021</span>
-                    </div>
-                </div>
-                <div class="row col-12">
-                    <div class="col-3">
-                        <span style="color: white;"><b>22</b></span>
-                        <span>Following</span>
-                    </div>
-                    <div class="col-3">
-                        <span style="color: white;"><b>22</b></span>
-                        <span>Followers</span>
-                    </div>
-                </div>
-            </section>
-            <section class="row col-12">
-                <nav class="my-3">
-                    <div class="col-2">
-                        <a href="#" class="nav-link active" data-target="posts">Posts</a>
-                    </div>
-                    <div class="col-2">
-                        <a href="#" class="nav-link" data-target="replies">Replies</a>
-                    </div>
-                    <div class="col-2">
-                        <a href="#" class="nav-link" data-target="highlights">Highlights</a>
-                    </div>
-                    <div class="col-2">
-                        <a href="#" class="nav-link" data-target="articles">Articles</a>
-                    </div>
-                    <div class="col-2">
-                        <a href="#" class="nav-link" data-target="media">Media</a>
-                    </div>
-                    <div class="col-2">
-                        <a href="#" class="nav-link" data-target="likes">Likes</a>
-                    </div>
-                </nav>
-            </section>
-            <section id="tab-content" class="row col-12">
-                <div id="posts" class="tab-content active">Posts</div>
-                <div id="replies" class="tab-content">Replies</div>
-                <div id="highlights" class="tab-content">Highlights</div>
-                <div id="articles" class="tab-content">Articles</div>
-                <div id="media" class="tab-content">Media</div>
-                <div id="likes" class="tab-content">Likes</div>
-            </section>
-        </main>
-        <aside class="d-none d-lg-block col-lg-5 right-bar">
+                </section>
+                <section class="row col-12">
+                    <nav class="my-3">
+                        <div class="col-2">
+                            <a href="#" class="nav-link active" data-target="posts">Posts</a>
+                        </div>
+                        <div class="col-2">
+                            <a href="#" class="nav-link" data-target="replies">Replies</a>
+                        </div>
+                        <div class="col-2">
+                            <a href="#" class="nav-link" data-target="highlights">Highlights</a>
+                        </div>
+                        <div class="col-2">
+                            <a href="#" class="nav-link" data-target="articles">Articles</a>
+                        </div>
+                        <div class="col-2">
+                            <a href="#" class="nav-link" data-target="media">Media</a>
+                        </div>
+                        <div class="col-2">
+                            <a href="#" class="nav-link" data-target="likes">Likes</a>
+                        </div>
+                    </nav>
+                </section>
+                <section id="tab-content" class="row col-12">
+                    <div id="posts" class="tab-content active">Posts</div>
+                    <div id="replies" class="tab-content">Replies</div>
+                    <div id="highlights" class="tab-content">Highlights</div>
+                    <div id="articles" class="tab-content">Articles</div>
+                    <div id="media" class="tab-content">Media</div>
+                    <div id="likes" class="tab-content">Likes</div>
+                </section>
+            </main>
+            <aside class="d-none d-lg-block col-lg-5 right-bar">
 
-             <!-- Search Bar -->
-             <div class="d-none d-lg-block">
-                <div class="container mt-3">
-                    <div class="input-group mb-3 border rounded-3">
-                        <button class="btn btn-outline-none bg-light" type="button" id="button-addon2"><i
-                                class="fa fa-search"></i></button>
-                        <input type="text" class="form-control border-0 bg-light" placeholder="Search"
-                            aria-label="Search" aria-describedby="button-addon2" onfocus="showSearchMessage()"
-                            onblur="hideSearchMessage()">
+                <!-- Search Bar -->
+                <div class="d-none d-lg-block">
+                    <div class="container mt-3">
+                        <div class="input-group mb-3 border rounded-3">
+                            <button class="btn btn-outline-none bg-light" type="button" id="button-addon2"><i
+                                    class="fa fa-search"></i></button>
+                            <input type="text" class="form-control border-0 bg-light" placeholder="Search"
+                                aria-label="Search" aria-describedby="button-addon2" onfocus="showSearchMessage()"
+                                onblur="hideSearchMessage()">
+                        </div>
+                        <div id="searchMessage" class="text-muted" style="display: none;">Try searching for people,
+                            lists,
+                            or keywords</div>
                     </div>
-                    <div id="searchMessage" class="text-muted" style="display: none;">Try searching for people, lists,
-                        or keywords</div>
                 </div>
-             </div>
-            
-            <!-- Subscribe to Premium Card -->
-            <div class="card m-2 bg-light rounded-3">
-                <div class="card-body m-2 ">
-                    <h4 class="card-title font-weight-bold">Subscribe to Premium</h4>
-                    <p class="card-text col-11">Subscribe to unlock new features and if eligible, receive a share of
-                        ads revenue.</p>
-                    <a href="#" class="btn btn-primary rounded-5">Subscribe</a>
+
+                <!-- Subscribe to Premium Card -->
+                <div class="card m-2 bg-light rounded-3">
+                    <div class="card-body m-2 ">
+                        <h4 class="card-title font-weight-bold">Subscribe to Premium</h4>
+                        <p class="card-text col-11">Subscribe to unlock new features and if eligible, receive a share of
+                            ads revenue.</p>
+                        <a href="#" class="btn btn-primary rounded-5">Subscribe</a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- What’s happening Card -->
-            <div class="card m-2 bg-light">
-                <div id="trends-container" class="card-body">
-                    <h5 class="card-title font-weight-bold">What's happening</h5>
-                    <!-- Updated Trends -->
-                    <div id="show-more"><a href="#">Show more</a></div>
+                <!-- What’s happening Card -->
+                <div class="card m-2 bg-light">
+                    <div id="trends-container" class="card-body">
+                        <h5 class="card-title font-weight-bold">What's happening</h5>
+                        <!-- Updated Trends -->
+                        <div id="show-more"><a href="#">Show more</a></div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Who to follow Card -->
-            <div class="card m-2 bg-light">
-                <div class="card-body">
-                    <h5 class="card-title font-weight-bold">Who to follow</h5>
+                <!-- Who to follow Card -->
+                <div class="card m-2 bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Who to follow</h5>
 
-                    <div class="d-flex justify-content-between align-items-center user">
-                        <div class="d-flex justify-content-start align-items-center">
-                            <img src="../../public/images/user1.jpg" class="img-fluid rounded-circle profileImage"
-                                alt="Profile Image">
-                            <div class="px-3">
-                                <div id="user_name">Mostafa Roshdy</div>
-                                <div id="user_email">@mostafa.roshdy</div>
+                        <div class="d-flex justify-content-between align-items-center user">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img src="../../public/images/user1.jpg" class="img-fluid rounded-circle profileImage"
+                                    alt="Profile Image">
+                                <div class="px-3">
+                                    <div id="user_name">Mostafa Roshdy</div>
+                                    <div id="user_email">@mostafa.roshdy</div>
+                                </div>
                             </div>
+                            <a href="#" class="btn btn-light rounded-5">Follow</a>
                         </div>
-                        <a href="#" class="btn btn-light rounded-5">Follow</a>
-                    </div>
 
-                    <div class="d-flex justify-content-between align-items-center user">
-                        <div class="d-flex justify-content-start align-items-center">
-                            <img src="../../public/images/user2.jpg" class="img-fluid rounded-circle profileImage"
-                                alt="Profile Image">
-                            <div class="px-3">
-                                <div id="user_name">Nada Rabea</div>
-                                <div id="user_email">@nada.rabea</div>
+                        <div class="d-flex justify-content-between align-items-center user">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img src="../../public/images/user2.jpg" class="img-fluid rounded-circle profileImage"
+                                    alt="Profile Image">
+                                <div class="px-3">
+                                    <div id="user_name">Nada Rabea</div>
+                                    <div id="user_email">@nada.rabea</div>
+                                </div>
                             </div>
+                            <a href="#" class="btn btn-light rounded-5">Follow</a>
                         </div>
-                        <a href="#" class="btn btn-light rounded-5">Follow</a>
-                    </div>
 
-                    <div class="d-flex justify-content-between align-items-center user">
-                        <div class="d-flex justify-content-start align-items-center">
-                            <img src="../../public/images/user3.jpg" class="img-fluid rounded-circle profileImage"
-                                alt="Profile Image">
-                            <div class="px-3">
-                                <div id="user_name">Mohamed Hossny</div>
-                                <div id="user_email">@mohamed.hossny</div>
+                        <div class="d-flex justify-content-between align-items-center user">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img src="../../public/images/user3.jpg" class="img-fluid rounded-circle profileImage"
+                                    alt="Profile Image">
+                                <div class="px-3">
+                                    <div id="user_name">Mohamed Hossny</div>
+                                    <div id="user_email">@mohamed.hossny</div>
+                                </div>
                             </div>
+                            <a href="#" class="btn btn-light rounded-5">Follow</a>
                         </div>
-                        <a href="#" class="btn btn-light rounded-5">Follow</a>
-                    </div>
 
-                    <div class="d-flex justify-content-between align-items-center user">
-                        <div class="d-flex justify-content-start align-items-center">
-                            <img src="../../public/images/user4.jpg" class="img-fluid rounded-circle profileImage"
-                                alt="Profile Image">
-                            <div class="px-3">
-                                <div id="user_name">Ziad Elganzory</div>
-                                <div id="user_email">@ziad.elganzory</div>
+                        <div class="d-flex justify-content-between align-items-center user">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img src="../../public/images/user4.jpg" class="img-fluid rounded-circle profileImage"
+                                    alt="Profile Image">
+                                <div class="px-3">
+                                    <div id="user_name">Ziad Elganzory</div>
+                                    <div id="user_email">@ziad.elganzory</div>
+                                </div>
                             </div>
+                            <a href="#" class="btn btn-light rounded-5">Follow</a>
                         </div>
-                        <a href="#" class="btn btn-light rounded-5">Follow</a>
+
+                        <div id="show-more"><a href="#">Show more</a></div>
                     </div>
+                </div>
 
-                    <div id="show-more"><a href="#">Show more</a></div>
+                <!-- Footer -->
+                <div class="footer text-center">
+                    <div class="row d-flex justify-content-end">
+                        <a class="col-4" href="#">Terms of Service</a>
+                        <a class="col-4" href="#">Privacy Policy</a>
+                        <a class="col-4" href="#">Cookie Policy</a>
+                    </div>
+                    <div class="row">
+                        <a class="col-3" href="#">Accessibility</a>
+                        <a class="col-3" href="#">Ads info</a>
+                        <a class="col-2" href="#">More...</a>
+                        <span class="col-4 ">© 2024 X Corp.</span>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Footer -->
-            <div class="footer text-center">
-                <div class="row d-flex justify-content-end">
-                    <a class="col-4" href="#">Terms of Service</a>
-                    <a class="col-4" href="#">Privacy Policy</a>
-                    <a class="col-4" href="#">Cookie Policy</a>
-                </div>
-                <div class="row">
-                    <a class="col-3" href="#">Accessibility</a>
-                    <a class="col-3" href="#">Ads info</a>
-                    <a class="col-2" href="#">More...</a>
-                    <span class="col-4 ">© 2024 X Corp.</span>
-                </div>
-            </div>
-        </aside>
-    </div>
+            </aside>
+        </div>
 
 
 
@@ -314,7 +315,7 @@
         <div class="modal-content">
             <div class="row">
                 <span class="close col-2">
-                    <i class="fa-solid fa-xmark"></i>                </span>
+                    <i class="fa-solid fa-xmark"></i> </span>
                 <h3 class="col-8">Edit Profile</h3>
                 <button class="col-2 rounded-5 ">Save</button>
             </div>
@@ -324,7 +325,8 @@
                     <div class="row">
                         <div class="col-9">
                             <div class="profile-image">
-                                <img id="profileImg" src="../../public/Images/3.jpeg" class="rounded-circle" alt="Profile Image">
+                                <img id="profileImg" src="../../public/Images/3.jpeg" class="rounded-circle"
+                                    alt="Profile Image">
                             </div>
                             <div class="buttons">
                                 <label for="imageUpload" class="rounded-circle" id="profileImgbtn">
@@ -349,7 +351,7 @@
                 </div>
                 <input type="file" id="imageUpload" style="display: none;">
                 <input type="file" id="imagebgUpload" style="display: none;">
-                
+
                 <div class="mb-3 form-floating">
                     <input type="text" class="form-control" name="name" placeholder=" ">
                     <p>Name</p>
@@ -367,7 +369,7 @@
                     <p for="floatingInput">Website</p>
                 </div>
             </form>
-            
+
         </div>
     </div>
     <script src="../scripts/profile.js"></script>

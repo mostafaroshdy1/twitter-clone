@@ -87,7 +87,6 @@ main header div:first-child:hover{
 }
 
 .profile-header {
-    position: relative;
     background-image: url('../../public/Images/1.jpeg');
     background-size: cover;
     background-position: center;
@@ -95,11 +94,15 @@ main header div:first-child:hover{
 }
 
 .profile-image {
-    position: absolute;
-    top: 180px;
-    left: 24%;
+    position: relative;
     border: 5px solid black;
     border-radius: 50%;
+}
+
+.profile-image img {
+    position: absolute;
+    top: -90px;
+    background-color: black;
 }
 
 .profile-image img {
