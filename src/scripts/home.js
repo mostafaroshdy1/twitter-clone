@@ -36,7 +36,6 @@ function hideSearchMessage() {
 
 // Function to retrieve user data from local storage and create user object
 function getUserData() {
-
     const userString = localStorage.getItem('user');
     const user = JSON.parse(userString);
     const name = user.name;
@@ -57,13 +56,27 @@ function getUserData() {
 function updateProfileBar() {
     const userData = getUserData();
     if (userData) {
-        document.querySelector('.profileImage').src = userData.imageUrl;
+        // document.querySelector('.profileImage').src = userData.imageUrl;
+
+        var images = document.getElementsByClassName('profileUserImage');
+        for (var i = 0; i < images.length; i++) {
+            images[i].src= userData.imageUrl;
+        }
+
         document.getElementById('user_name').innerText = userData.name;
+        
+        // document.getElementById('user_name_profile').innerText = userData.name;
+        var elements = document.getElementsByClassName('user_name_profile');
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].innerText = userData.name;
+        }
          // Extracting the username part from the email
         const emailParts = userData.email.split('@');
         const username = '@' + emailParts[0];
         document.getElementById('user_email').innerText = username;
-        document.getElementById('user_email_bookmark').innerText = username;
+        document.getElementById('user_email_tag').innerText = username;
+        // document.getElementById('user_email_bookmark').innerText = username;
     }
 }
 
@@ -71,25 +84,6 @@ function updateProfileBar() {
 document.addEventListener("DOMContentLoaded", function() {
     updateProfileBar();
 });
-
-//Create What's happening trends
-// function createTrendDivs(count) {
-//     var container = document.getElementById('trends-container');
-//     var beforeElement = document.getElementById('show-more');
-//     for (var i = 0; i < count; i++) {
-//         var div = document.createElement('div');
-//         div.className = 'trend';
-//         div.innerHTML = `
-//             <div class="d-flex justify-content-between align-items-center">
-//                 <span>Trending in Egypt</span>
-//                 <i class="fas fa-ellipsis-h rounded-circle p-1 w-2"></i>
-//             </div>
-//             <div class="text-end">
-//                 <span>أحدث_الأخبار#</span>
-//             </div>`;
-//         container.insertBefore(div, beforeElement);
-//         }
-// }
 
 Promise.all([
     fetchAndSelectRandomTrend('For You'),

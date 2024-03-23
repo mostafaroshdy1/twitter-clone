@@ -127,3 +127,10 @@ const email = emailString.substring(0, atIndex);
 const userImage = localStorage.getItem('userImage');
 const posts = localStorage.getItem('posts');
 
+// document.getElementById('username-main').innerText = userName;
+// document.getElementById('user-details-main').children[1].innerText = email;
+document.getElementById('profileImageUser').src= userImage;
+document.querySelector('.profile-image img').src = userImage;
+document.querySelector('.modal .profile-image img').src = userImage;
+document.getElementById('no-posts').innerText = `${posts.length} Posts`;
+document.getElementById('username-header').innerText = userName;

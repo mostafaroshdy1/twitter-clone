@@ -33,49 +33,49 @@
         <!-- Nav bar -->
         <nav class="nav flex-column custom-nav-link " bs-nav-link-color="black">
             <div>
-                <a class="nav-link p-3 active " aria-current="page" href="home.html">
+                <a class="nav-link-bar p-3 active " aria-current="page" href="home.html">
                     <i class="fa-solid fa-house"></i>
                     <span class="d-none d-lg-inline">Home</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="explore.html">
+                <a class="nav-link-bar p-3" href="explore.html">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span class="d-none d-lg-inline">Explore</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="notifications.html">
+                <a class="nav-link-bar p-3" href="notifications.html">
                     <i class="fa-solid fa-bell"></i>
                     <span class="d-none d-lg-inline">Notifications</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="messages.html">
+                <a class="nav-link-bar p-3" href="messages.html">
                     <i class="fa-regular fa-envelope"></i>
                     <span class="d-none d-lg-inline">Messages</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="bookmarks.html">
+                <a class="nav-link-bar p-3" href="bookmarks.html">
                     <i class="far fa-bookmark"></i>
                     <span class="d-none d-lg-inline">Bookmarks</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#">
+                <a class="nav-link-bar p-3" href="#">
                     <i class="fa-brands fa-x-twitter"></i>
                     <span class="d-none d-lg-inline">Premium</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="profile.html">
+                <a class="nav-link-bar p-3" href="profile.html">
                     <i class="fa-regular fa-user"></i>
                     <span class="d-none d-lg-inline">Profile</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#">
+                <a class="nav-link-bar p-3" href="#">
                     <i class="fas fa-ellipsis-h"></i>
                     <span class="d-none d-lg-inline">More</span>
                 </a>
@@ -90,7 +90,7 @@
         <!-- Profile Bar -->
         <div class="profile-bar p-3 mt-5 d-lg-flex justify-content-between d-none align-items-center">
             <div class="d-flex justify-content-start align-items-center">
-                <img class="img-fluid rounded-circle profileImage" alt="Profile Image">
+                <img class="img-fluid rounded-circle profileImage profileUserImage" alt="Profile Image">
                 <div class="px-3">
                     <div id="user_name"></div>
                     <div id="user_email"></div>
@@ -103,33 +103,6 @@
     <!-- Middle Section -->
     <div id="scrollable-container" class="row col-12 col-md-10 col-lg-9 overflow-auto">
 
-        <!-- Upper fixed bar -->
-        <!-- <div class="row top-bar">
-            <div class="col-12 col-md-10 col-lg-7 border  d-lg-flex justify-content-between align-items-center top-section">
-                <div  class="col-5 mx-3">
-                    <div>Bookmarks</div>
-                    <span id="user_email_bookmark"></span>
-                </div>
-                <div class="col-1 text-center">
-                    <i class="fas fa-ellipsis-h p-2 rounded-circle"></i>
-                </div>
-            </div> -->
-        <!-- Search Bar -->
-        <!-- <div class="d-none d-lg-block col-lg-5 right-bar">
-                <div class="container mt-3">
-                    <div class="input-group mb-3 border rounded-3">
-                        <button class="btn btn-outline-none bg-light" type="button" id="button-addon2"><i
-                                class="fa fa-search"></i></button>
-                        <input type="text" class="form-control border-0 bg-light" placeholder="Search"
-                            aria-label="Search" aria-describedby="button-addon2" onfocus="showSearchMessage()"
-                            onblur="hideSearchMessage()">
-                    </div>
-                    <div id="searchMessage" class="text-muted" style="display: none;">Try searching for people, lists,
-                        or keywords</div>
-                </div>
-            </div> -->
-        <!-- </div> -->
-
         <!-- Lower scrollable bar -->
         <div class="row main-body">
             <!-- Main Section -->
@@ -137,7 +110,7 @@
                 <div class="row top-scroll-extra">
                     <div class="col-5 mx-3">
                         <div>Bookmarks</div>
-                        <span id="user_email_bookmark"></span>
+                        <span id="user_email_tag"></span>
                     </div>
                     <div class="col-1 text-center">
                         <i class="fas fa-ellipsis-h p-2 rounded-circle"></i>
