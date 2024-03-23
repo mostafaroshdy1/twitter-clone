@@ -205,12 +205,12 @@ textarea {
     resize: none;
 }
 
-.main-body .posts-section .btn {
+.interactions .btn {
     color: white;
     transition: background-color 0.3s ease;
 }
 
-.main-body .posts-section .btn:hover {
+.interactions .btn:hover {
     color: #1A8AD6;
 }
 
