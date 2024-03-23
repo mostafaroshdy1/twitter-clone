@@ -218,7 +218,7 @@ form .profile-header {
 }
 form .profile-image {
     position: absolute;
-    top: 170px;
+    top: 255px;
     left: 8%;
     border: 5px solid black;
     border-radius: 50%;
