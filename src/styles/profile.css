@@ -106,7 +106,8 @@ main header div:first-child:hover{
 }
 
 .profile-image img {
-    width: 130px;
+    max-width: 130px;
+    max-height: 130px;
 }
 
 .button{
@@ -218,7 +219,7 @@ form .profile-header {
 }
 form .profile-image {
     position: absolute;
-    top: 255px;
+    top: 170px;
     left: 8%;
     border: 5px solid black;
     border-radius: 50%;

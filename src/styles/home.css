@@ -30,7 +30,6 @@ body {
     cursor: pointer;
 }
 
-
 .custom-nav-link a {
     display: inline-block;
     color: black;
@@ -52,7 +51,6 @@ body {
     height: 15%;
 }
 
-
 #user_email {
     color: #A9A9A9;
 }
@@ -71,7 +69,7 @@ body {
 }
 
 #scrollable-container {
-    /* max-height: 100vh; */
+    max-height: 100vh;
     border: 1px solid #ddd;
 }
 
@@ -85,9 +83,24 @@ body {
     color: white;
 }
 
+.top-scroll-bar, .top-scroll-extra{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 999;
+}
+
+.top-scroll-extra{
+    padding-top: 1rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .top-section {
     height: 10.5vh;
     padding: 0 !important;
+    align-items: center;
 }
 
 .top-section a {
@@ -107,11 +120,12 @@ body {
     cursor: pointer;
 }
 
-.main-body {
+/* .main-body {
     margin-top: 10vh;
-}
+} */
 
 .main-section {
+    top: 0;
     padding: 0 !important;
 }
 
@@ -190,23 +204,19 @@ textarea {
     resize: none;
 }
 
-.main-body .post-section .btn {
+.main-body .posts-section .btn {
     color: white;
     transition: background-color 0.3s ease;
 }
 
-.main-body .post-section .btn:hover {
-    color: #1A8AD6 !important;
+.main-body .posts-section .btn:hover {
+    color: #1A8AD6;
 }
 
 .trends-container {
     border-radius: 25px;
 }
 
-.bookmarked {
+.bookmarked{
     color: blue;
-}
-
-.clickable {
-    cursor: pointer;
 }

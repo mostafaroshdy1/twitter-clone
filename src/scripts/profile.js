@@ -107,7 +107,7 @@ class ImageUploader {
 }
 
 
-const tabManager = new TabManager();
+// const tabManager = new TabManager();
 const modal = new Modal();
 const formManager = new FormManager();
 const profileImgUploader = new ImageUploader('imageUpload', 'profileImg');

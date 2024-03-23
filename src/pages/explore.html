@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="icon"
+    type="image/x-icon"
+    href="https://abs.twimg.com/favicons/twitter.3.ico"
+    />
     <title>Explore</title>
     <!-- Link Bootstrap Icons library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -19,13 +24,11 @@
     rel="stylesheet"
   />
 
- 
-
 </head>
 <body class="container-fluid d-flex">
 
     <!-- Left Section -->
-    <div class="col-12 col-md-2 col-lg-3  px-0 px-lg-5 overflow-auto left-bar">
+    <div id="scrollable-container" class="col-12 col-md-2 col-lg-3  px-0 px-lg-5 overflow-auto left-bar">
 
         <!-- Twitter Icon -->
         <div class="main-icon p-3 d-flex justify-content-center col-3"  onclick="iconHomeClicked()">
@@ -37,7 +40,7 @@
         <!-- Nav bar -->
         <nav class="nav flex-column custom-nav-link " bs-nav-link-color="black">
             <div>
-                <a class="nav-link p-3 active " aria-current="page" href="home.html"> 
+                <a class="nav-link p-3 active " aria-current="page" href="home.html">
                     <i class="fa-solid fa-house"></i>
                     <span class="d-none d-lg-inline">Home</span>
                 </a>
@@ -49,13 +52,13 @@
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#">
+                <a class="nav-link p-3" href="notifications.html">
                     <i class="fa-solid fa-bell"></i>
                     <span class="d-none d-lg-inline">Notifications</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#">
+                <a class="nav-link p-3" href="messages.html">
                     <i class="fa-regular fa-envelope"></i>
                     <span class="d-none d-lg-inline">Messages</span>
                 </a>
@@ -67,13 +70,13 @@
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#"> 
+                <a class="nav-link p-3" href="#">
                     <i class="fa-brands fa-x-twitter"></i>
                     <span class="d-none d-lg-inline">Premium</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#">
+                <a class="nav-link p-3" href="profile.html">
                     <i class="fa-regular fa-user"></i>
                     <span class="d-none d-lg-inline">Profile</span>
                 </a>
@@ -105,9 +108,9 @@
     </div>
 
     <!-- Middle Section -->
-    <main class="col-12 col-md-10 col-lg-11 m-0">
-        <div class="main-flex col-lg-8">
-          <div class="main-feed border" >
+    <main class="col-12 col-md-10 col-lg-9 m-0">
+        <div class="main-flex">
+          <div class="main-feed border col-lg-7" >
             <div class="home">
               <div class="home-top ">
                 <div class="search-home">
@@ -136,7 +139,7 @@
   
           
         <!-- Right Section -->
-        <div class="d-none d-lg-block col-lg-4 right-bar">
+        <div class="d-none d-lg-block col-lg-5 right-bar">
 
             <!-- Subscribe to Premium Card -->
                 <div class="card m-2 bg-light rounded-3">

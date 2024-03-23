@@ -24,21 +24,27 @@ function hideSearchMessage() {
     document.getElementById("searchMessage").style.display = "none";
 }
 
-//Dummy Data
-storeUserData("../../public/images/profileImg.jpg","Merna Gamal","Merna.Gamal");
+// //Dummy Data
+// storeUserData("../../public/images/profileImg.jpg","Merna Gamal","Merna.Gamal");
 
-// Function to store user data in local storage
-function storeUserData(imageUrl, name, email) {
-    localStorage.setItem('userImage', imageUrl);
-    localStorage.setItem('userName', name);
-    localStorage.setItem('userEmail', email);
-}
+// // Function to store user data in local storage
+// function storeUserData(imageUrl, name, email) {
+//     localStorage.setItem('userImage', imageUrl);
+//     localStorage.setItem('userName', name);
+//     localStorage.setItem('userEmail', email);
+// }
 
 // Function to retrieve user data from local storage and create user object
 function getUserData() {
+
+    const userString = localStorage.getItem('user');
+    const user = JSON.parse(userString);
+    const name = user.name;
+    const email = user.email;
+
     const imageUrl = localStorage.getItem('userImage');
-    const name = localStorage.getItem('userName');
-    const email = localStorage.getItem('userEmail');
+    // const name = localStorage.getItem('userName');
+    // const email = localStorage.getItem('userEmail');
     
     return {
         imageUrl: imageUrl,

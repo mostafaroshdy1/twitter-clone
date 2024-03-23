@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link
+    rel="icon"
+    type="image/x-icon"
+    href="https://abs.twimg.com/favicons/twitter.3.ico"
+    />
+    <title>Bookmarks</title>
     <!-- Link Bootstrap Icons library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -44,13 +49,13 @@
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#">
+                <a class="nav-link p-3" href="notifications.html">
                     <i class="fa-solid fa-bell"></i>
                     <span class="d-none d-lg-inline">Notifications</span>
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#">
+                <a class="nav-link p-3" href="messages.html">
                     <i class="fa-regular fa-envelope"></i>
                     <span class="d-none d-lg-inline">Messages</span>
                 </a>
@@ -68,7 +73,7 @@
                 </a>
             </div>
             <div>
-                <a class="nav-link p-3" href="#">
+                <a class="nav-link p-3" href="profile.html">
                     <i class="fa-regular fa-user"></i>
                     <span class="d-none d-lg-inline">Profile</span>
                 </a>
@@ -103,7 +108,7 @@
     <div id="scrollable-container" class="row col-12 col-md-10 col-lg-9 overflow-auto">
 
         <!-- Upper fixed bar -->
-        <div class="row top-bar">
+        <!-- <div class="row top-bar">
             <div class="col-12 col-md-10 col-lg-7 border  d-lg-flex justify-content-between align-items-center top-section">
                 <div  class="col-5 mx-3">
                     <div>Bookmarks</div>
@@ -112,9 +117,9 @@
                 <div class="col-1 text-center">
                     <i class="fas fa-ellipsis-h p-2 rounded-circle"></i>
                 </div>
-            </div>
+            </div> -->
             <!-- Search Bar -->
-            <div class="d-none d-lg-block col-lg-5 right-bar">
+            <!-- <div class="d-none d-lg-block col-lg-5 right-bar">
                 <div class="container mt-3">
                     <div class="input-group mb-3 border rounded-3">
                         <button class="btn btn-outline-none bg-light" type="button" id="button-addon2"><i
@@ -126,18 +131,44 @@
                     <div id="searchMessage" class="text-muted" style="display: none;">Try searching for people, lists,
                         or keywords</div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
 
         <!-- Lower scrollable bar -->
         <div class="row main-body">
             <!-- Main Section -->
-            <div class="col-12 col-md-10 col-lg-7 border   main-section">
+            <div class="col-12 col-md-10 col-lg-7 border border-secondary main-section">
+                <div class="row top-scroll-extra">
+                    <div class="col-5 mx-3">
+                        <div>Bookmarks</div>
+                        <span id="user_email_bookmark"></span>
+                    </div>
+                    <div class="col-1 text-center">
+                        <i class="fas fa-ellipsis-h p-2 rounded-circle"></i>
+                    </div>
+                </div>
                 <div class="bookmarks-section"> </div>
             </div>
 
             <!-- Right Section -->
             <div class="d-none d-lg-block col-lg-5 right-bar">
+                
+                <!-- Search Bar -->
+                <div class="row top-scroll-bar">
+                    <div class="d-none d-lg-block top-section d-flex justify-content-center align-items-center">
+                        <div class="container mt-3">
+                            <div class="input-group border border-secondary rounded-3">
+                                <button class="btn btn-outline-none bg-light" type="button" id="button-addon2"><i
+                                        class="fa fa-search"></i></button>
+                                <input type="text" class="form-control border-0 bg-light" placeholder="Search"
+                                    aria-label="Search" aria-describedby="button-addon2" onfocus="showSearchMessage()"
+                                    onblur="hideSearchMessage()">
+                            </div>
+                            <div id="searchMessage" class="text-muted" style="display: none;">Try searching for people, lists,or keywords</div>
+                        </div>
+                    </div>
+                    
+                </div>
 
                 <!-- Subscribe to Premium Card -->
                 <div class="card m-2 bg-light rounded-3">
@@ -174,7 +205,6 @@
                             </div>
                             <a href="#" class="btn btn-light rounded-5">Follow</a>
                         </div>
-
 
                         <div class="d-flex justify-content-between align-items-center user">
                             <div class="d-flex justify-content-start align-items-center">
@@ -232,11 +262,7 @@
                 </div>
 
             </div>
-
         </div>
-
-
-
     </div>
     <script src="../scripts/home.js"></script>
     <script src="../scripts/bookmarkedPostCreate.js" type="module"></script>
