@@ -48,41 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 
-//   Promise.all([
-//     fetchAndSelectRandomTrend('For You'),
-//     fetchAndSelectRandomTrend('Trending'),
-//     fetchAndSelectRandomTrend('News'),
-//     fetchAndSelectRandomTrend('Sports'),
-//     fetchAndSelectRandomTrend('Entertainment')
-// ])
-// .then(results => {
-//     const trendsDiv = document.querySelector('.trends');
-//     results.forEach(trend => {
-
-//         const trendingItem = document.createElement('div');
-//         trendingItem.classList.add('trending-item');
-//         const category = document.createElement('div');
-//         category.classList.add('item-category');
-//         category.innerHTML = `
-//             <span>Trending in ${trend.trend_location}</span>
-//             <i class="material-icons-outlined">more_horiz</i>
-//         `;
-//         const trendName = document.createElement('p');
-//         trendName.textContent = trend.trend_name;
-//         const tweetCount = document.createElement('span');
-//         tweetCount.textContent = `${trend.post_count} Tweets`;
-
-
-//         trendingItem.appendChild(category);
-//         trendingItem.appendChild(trendName);
-//         trendingItem.appendChild(tweetCount);
-//         trendsDiv.appendChild(trendingItem);
-//     });
-// })
-// .catch(error => {
-//     console.error('Error fetching data:', error);
-// });
-
 function fetchAndSelectRandomTrend(category) {
 
     return fetch(`../../public/json/explore.json`)

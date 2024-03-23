@@ -56,11 +56,11 @@ body {
 }
 
 #user_name,
-.nav-link.active {
+.nav-link-bar.active {
     font-weight: bold;
 }
 
-.nav-link:hover,
+.nav-link-bar:hover,
 .profile-bar:hover {
     background-color: #181818;
     border-radius: 3em;

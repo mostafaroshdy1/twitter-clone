@@ -24,19 +24,7 @@ header{
     display: block;
     
 }
-/* .nav-link:hover{
-    background-color: #302f29;
-}
-.nav-link{
-    font-size: .9em !important;
-    padding: .5em !important;
-    color: 302f29 ;
-}
-.nav-link.active {
-    font-weight: bold;
-    color: white !important;
-    border-bottom: 8px solid #1068b4 ;
-} */
+
 .tabs{
     border-bottom: 1px solid rgb(202, 175, 175);
 }
@@ -46,9 +34,7 @@ header{
     align-items: center;
     flex-direction: column;
 }
-/* .fa-solid{
-    font-size: 1.5em;
-} */
+
 .fa-star{
     color: yellow;
 }

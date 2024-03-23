@@ -3,10 +3,6 @@ body {
     color: white;
 }
 
-/* nav {
-    font-size: 1.3em;
-} */
-
 nav a {
     display: inline-block;
     color: black;
@@ -153,15 +149,6 @@ main section nav div:hover{
     display: block;
     
 }
-.nav-link{
-    /* font-size: .9em !important; */
-}
-
-/* .nav-link.active {
-    font-weight: bold;
-    color: white !important;
-    border-bottom: 8px solid #1068b4 ;
-} */
 
 .modal {
     display: none;
