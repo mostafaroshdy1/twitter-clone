@@ -99,7 +99,7 @@ const loginError = document.getElementById('loginError');
 function checkCredentials(email, password) {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser && storedUser.email === email && storedUser.password === password) {
-        window.location.href = 'http://127.0.0.1:5501/src/pages/home.html';
+        window.location.href = 'https://mostafaroshdy1.github.io/twitter-clone/src/pages/home.html';
 
     } else {
 
