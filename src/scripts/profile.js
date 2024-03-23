@@ -1,118 +1,123 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const tabs = document.querySelectorAll('.nav-link');
-    const tabContents = document.querySelectorAll('.tab-content');
+class TabManager {
+    constructor() {
+        this.tabs = document.querySelectorAll('.nav-link');
+        this.tabContents = document.querySelectorAll('.tab-content');
+        this.setupTabs();
+    }
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = this.getAttribute('data-target');
-
-            tabs.forEach(t => t.classList.remove('active'));
-            tabContents.forEach(tc => tc.classList.remove('active'));
-
-            this.classList.add('active');
-            document.getElementById(target).classList.add('active');
+    setupTabs() {
+        this.tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = tab.getAttribute('data-target');
+                this.hideAllTabs();
+                tab.classList.add('active');
+                document.getElementById(target).classList.add('active');
+            });
         });
-    });
-});
+    }
 
-var modal = document.getElementById('editProfileModal');
-
-var btn = document.getElementById('openModal');
-var span = document.getElementsByClassName('close')[0];
-
-btn.onclick = function () {
-    modal.style.display = 'block';
-}
-
-span.onclick = function () {
-    modal.style.display = 'none';
-}
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
+    hideAllTabs() {
+        this.tabs.forEach(tab => tab.classList.remove('active'));
+        this.tabContents.forEach(tc => tc.classList.remove('active'));
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const inputs = document.querySelectorAll('.form-floating input');
-    inputs.forEach(input => {
-        input.addEventListener('focus', function() {
-            this.nextElementSibling.classList.add('active');
+class Modal {
+    constructor() {
+        this.modal = document.getElementById('editProfileModal');
+        this.openButton = document.getElementById('openModal');
+        this.closeButton = document.querySelector('.close');
+        this.saveButton = document.querySelector('.modal-content button');
+        this.setupModal();
+    }
+
+    setupModal() {
+        this.openButton.addEventListener('click', () => {
+            this.modal.style.display = 'block';
         });
-        input.addEventListener('blur', function() {
-            if (this.value === '') {
-                this.nextElementSibling.classList.remove('active');
+
+        this.closeButton.addEventListener('click', () => {
+            this.modal.style.display = 'none';
+        });
+
+        this.saveButton.addEventListener('click', () => {
+            const fileInput = document.getElementById('imageUpload');
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const imageBase64 = e.target.result;
+                    localStorage.setItem('userImage', imageBase64);
+                    document.querySelector('.profile-image img').src = imageBase64;
+                };
+                reader.readAsDataURL(file);
+            }
+            this.modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === this.modal) {
+                this.modal.style.display = 'none';
             }
         });
-    });
-});
-
-const fileInput = document.getElementById('imageUpload');
-const profileImg = document.getElementById('profileImg');
-
-fileInput.addEventListener('change', function() {
-    const file = this.files[0];
-    if (file) { 
-        const reader = new FileReader(); 
-        reader.onload = function(e) {
-            profileImg.src = e.target.result;
-        }
-        reader.readAsDataURL(file); 
     }
-});
+}
 
-const BgInput = document.getElementById('imagebgUpload');
-const BgeImg = document.querySelector('form .profile-header');
-
-BgInput.addEventListener('change', function() {
-    const file = this.files[0];
-    if (file) { 
-        const reader = new FileReader(); 
-        reader.onload = function(e) {
-            BgeImg.style.backgroundImage = `url(${e.target.result})`;
-        }
-        reader.readAsDataURL(file); 
+class FormManager {
+    constructor() {
+        this.inputs = document.querySelectorAll('.form-floating input');
+        this.setupInputs();
     }
-});
-//Edit Form 
-document.addEventListener('DOMContentLoaded', function() {
-    const locationSpan = document.querySelector('#user-details-main > div:nth-child(1) > span:nth-child(2)');
-    const nameSpan = document.querySelector('#username-main');
 
-    const locationInput = document.querySelector('input[name="location"]');
-    const nameInput = document.querySelector('input[name="name"]');
+    setupInputs() {
+        this.inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.nextElementSibling.classList.add('active');
+            });
 
-    locationInput.value = locationSpan.textContent;
-    nameInput.value = nameSpan.textContent;
-});
+            input.addEventListener('blur', () => {
+                if (input.value === '') {
+                    input.nextElementSibling.classList.remove('active');
+                }
+            });
+        });
+    }
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Get elements
-    const saveBtn = document.querySelector("#editProfileModal .modal-content button");
-    const usernameInput = document.querySelector("#editProfileModal input[name='name']");
-    const locationInput = document.querySelector("#editProfileModal input[name='location']");
-    const profileHeader = document.querySelector("#user-details-main .profile-header");
-    const profileImage = document.querySelector("#editProfileModal .profile-image img");
-    const userDetailsUsername = document.querySelector("#user-details-main #username-main");
-    const userDetailsLocation = document.querySelector("#user-details-main .row .col-4:first-child span:last-child");
+class ImageUploader {
+    constructor(inputId, targetElement) {
+        this.fileInput = document.getElementById(inputId);
+        this.targetElement = document.getElementById(targetElement);
+        this.setupUploader();
+    }
 
-    // Save button click event
-   // Save button click event
-    saveBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        // Update username
-        userDetailsUsername.textContent = usernameInput.value;
-        // Update location
-        userDetailsLocation.textContent = locationInput.value;
-        
-        // Delay updating the image to allow time for the new image to load
-        setTimeout(() => {
-            // Update background
-            profileHeader.style.backgroundImage = `url(${profileImage.src})`;
-        }, 1000); // 1 second delay
-    });
+    setupUploader() {
+        this.fileInput.addEventListener('change', () => {
+            const file = this.fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    this.targetElement.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+}
 
-});
 
+const tabManager = new TabManager();
+const modal = new Modal();
+const formManager = new FormManager();
+const profileImgUploader = new ImageUploader('imageUpload', 'profileImg');
+const bgImgUploader = new ImageUploader('imagebgUpload', 'profile-header');
+
+const userName = localStorage.getItem('userName');
+const userEmail = localStorage.getItem('userEmail');
+const userImage = localStorage.getItem('userImage');
+
+document.getElementById('username-main').innerText = userName;
+document.getElementById('user-details-main').children[1].innerText = userEmail;
+document.querySelector('.profile-image img').src = userImage;
+document.querySelector('.modal .profile-image img').src = userImage;

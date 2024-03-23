@@ -29,8 +29,9 @@ class User {
         return this.#img;
     }
     // to be implemented by Nada
-    // set img() {
-    // }
+    set img(img) {
+        this.#img = img;
+    }
 
     get bookmarks() {
         return this.#bookmarks;
@@ -77,7 +78,7 @@ class User {
 
         user.#bookmarks = data.bookmarks || [];
 
-        // user.img = data.img; // after the img is been implemented by Nada
+        user.img = data.img; // after the img is been implemented by Nada
 
         return user;
     }
