@@ -83,14 +83,15 @@ body {
     color: white;
 }
 
-.top-scroll-bar, .top-scroll-extra{
+.top-scroll-bar,
+.top-scroll-extra {
     position: sticky;
     top: 0;
     background-color: black;
     z-index: 999;
 }
 
-.top-scroll-extra{
+.top-scroll-extra {
     padding-top: 1rem !important;
     display: flex;
     align-items: center;
@@ -217,6 +218,10 @@ textarea {
     border-radius: 25px;
 }
 
-.bookmarked{
+.bookmarked {
     color: blue;
+}
+
+.clickable {
+    cursor: pointer;
 }
