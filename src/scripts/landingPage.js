@@ -83,7 +83,7 @@ registrationForm.addEventListener('submit', function (event) {
 // Function to hide the congratulatory modal and redirect to another page
 function hideCongratsModal() {
     congratsModal.style.display = 'none';
-    window.location.href = 'http://127.0.0.1:5501/src/pages/index.html';
+    window.location.href = 'https://mostafaroshdy1.github.io/twitter-clone/src/pages/home.html';
 }
 
 continueLoginBtn.addEventListener('click', hideCongratsModal);
