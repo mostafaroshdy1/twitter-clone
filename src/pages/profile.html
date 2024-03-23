@@ -121,7 +121,7 @@
                         <div class="row">
                             <div class="col-9">
                                 <div class="profile-image mx-4">
-                                    <img src="../../public/Images/3.jpeg" class="rounded-circle" alt="Profile Image">
+                                    <img src="../../public/Images/3.jpeg" class="rounded-circle" alt="Profile Image" id="imgprofile">
                                 </div>
                             </div>
                             <div class="col-3">
@@ -130,14 +130,14 @@
                         </div>
                     </div>
                 </section>
-                <section class="row mx-1">
+                <section class="row mx-1 p-2">
                     <div id="user-details-main">
-                        <span id="username-main">ندى</span>
-                        <span>@nadarabea81</span>
+                        <span id="username-main"></span>
+                        <span id="email"></span>
                     </div>
                     <div id="bio"></div>
-                    <div class="row my-2">
-                        <div class="col-4">
+                    <div class="row my-2 details">
+                        <div class="col-3">
                             <i class="fa-solid fa-location-dot"></i>
                             <span>Alexandria,Egypt</span>
                         </div>
@@ -154,13 +154,13 @@
                             <span>Joined May 2021</span>
                         </div>
                     </div>
-                    <div class="row col-12">
+                    <div class="row my-2 col-12">
                         <div class="col-3">
                             <span style="color: white;"><b>22</b></span>
                             <span>Following</span>
                         </div>
                         <div class="col-3">
-                            <span style="color: white;"><b>22</b></span>
+                            <span style="color: white;"><b>19</b></span>
                             <span>Followers</span>
                         </div>
                     </div>
@@ -168,22 +168,22 @@
                 <section class="row col-12">
                     <nav class="my-3">
                         <div class="col-2">
-                            <a href="#" class="nav-link active" data-target="posts">Posts</a>
+                            <a href="#" class="nav-link active rounded-0 data-target="posts">Posts</a>
                         </div>
                         <div class="col-2">
-                            <a href="#" class="nav-link" data-target="replies">Replies</a>
+                            <a href="#" class="nav-link rounded-0" data-target="replies">Replies</a>
                         </div>
                         <div class="col-2">
-                            <a href="#" class="nav-link" data-target="highlights">Highlights</a>
+                            <a href="#" class="nav-link rounded-0" data-target="highlights">Highlights</a>
                         </div>
                         <div class="col-2">
-                            <a href="#" class="nav-link" data-target="articles">Articles</a>
+                            <a href="#" class="nav-link rounded-0" data-target="articles">Articles</a>
                         </div>
                         <div class="col-2">
-                            <a href="#" class="nav-link" data-target="media">Media</a>
+                            <a href="#" class="nav-link rounded-0" data-target="media">Media</a>
                         </div>
                         <div class="col-2">
-                            <a href="#" class="nav-link" data-target="likes">Likes</a>
+                            <a href="#" class="nav-link rounded-0" data-target="likes">Likes</a>
                         </div>
                     </nav>
                 </section>
@@ -353,7 +353,7 @@
                 <input type="file" id="imagebgUpload" style="display: none;">
 
                 <div class="mb-3 form-floating">
-                    <input type="text" class="form-control" name="name" placeholder=" ">
+                    <input type="text" class="form-control" name="name" placeholder=" "">
                     <p>Name</p>
                 </div>
                 <div class="mb-3 form-floating">

@@ -1,3 +1,5 @@
+// Existing code...
+
 class TabManager {
     constructor() {
         this.tabs = document.querySelectorAll('.nav-link');
@@ -42,17 +44,21 @@ class Modal {
         });
 
         this.saveButton.addEventListener('click', () => {
-            const fileInput = document.getElementById('imageUpload');
-            const file = fileInput.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    const imageBase64 = e.target.result;
-                    localStorage.setItem('userImage', imageBase64);
-                    document.querySelector('.profile-image img').src = imageBase64;
-                };
-                reader.readAsDataURL(file);
-            }
+            const form = document.querySelector('form');
+            const formData = new FormData(form);
+            const name = formData.get('name');
+            const bio = formData.get('bio');
+            const location = formData.get('location');
+            const website = formData.get('website');
+
+            // Update the local storage with the form data
+            localStorage.setItem('userName', name);
+            localStorage.setItem('userBio', bio);
+            localStorage.setItem('userLocation', location);
+            localStorage.setItem('userWebsite', website);
+
+            // You can also save the form data to localStorage or perform other actions as needed
+
             this.modal.style.display = 'none';
         });
 
@@ -106,13 +112,13 @@ class ImageUploader {
     }
 }
 
-
 const tabManager = new TabManager();
 const modal = new Modal();
 const formManager = new FormManager();
 const profileImgUploader = new ImageUploader('imageUpload', 'profileImg');
 const bgImgUploader = new ImageUploader('imagebgUpload', 'profile-header');
 
+// Update profile information
 const userName = localStorage.getItem('userName');
 const userEmail = localStorage.getItem('userEmail');
 const atIndex = emailString.indexOf("@");
@@ -120,10 +126,3 @@ const email = emailString.substring(0, atIndex);
 const userImage = localStorage.getItem('userImage');
 const posts = localStorage.getItem('posts');
 
-document.getElementById('username-main').innerText = userName;
-document.getElementById('user-details-main').children[1].innerText = email;
-document.getElementById('profileImageUser').src= userImage;
-document.querySelector('.profile-image img').src = userImage;
-document.querySelector('.modal .profile-image img').src = userImage;
-document.getElementById('no-posts').innerText = `${posts.length} Posts`;
-document.getElementById('username-header').innerText = userName;
