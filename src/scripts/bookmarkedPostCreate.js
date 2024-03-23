@@ -13,3 +13,8 @@ if (localStorage.getItem('user')) {
         console.log('User object does not contain bookmarks.');
     }
 }
+
+const bookmarkButton = document.querySelector('.bi-bookmark');
+bookmarkButton.addEventListener('click', () => {
+    window.location.reload();
+});

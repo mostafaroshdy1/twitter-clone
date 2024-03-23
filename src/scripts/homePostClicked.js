@@ -128,8 +128,6 @@ document.addEventListener('click', (e) => {
 
 })
 
-
-
 document.addEventListener('click', (e) => {
     if (replyBtn.id !== e.target.id) {
         return
@@ -144,6 +142,9 @@ document.addEventListener('click', (e) => {
             post = posts[i]
             break;
         }
+    }
+    if (commentText.value == "") {
+        return;
     }
     post.comment(commentText.value, JSON.parse(localStorage.getItem('user')).name);
     posts[i] = post;

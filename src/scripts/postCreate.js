@@ -17,6 +17,9 @@ if (localStorage.getItem('posts')) {
 
 async function addPost() {
     const postText = document.querySelector('.postText').value;
+    if (postText == "") {
+        return;
+    }
     const id = JSON.parse(localStorage.getItem('posts')) ? JSON.parse(localStorage.getItem('posts')).length++ : 0;
     const post = new Post(user.name, postText, id);
     if (postImage) {

@@ -106,7 +106,8 @@ main header div:first-child:hover{
 }
 
 .profile-image img {
-    width: 130px;
+    max-width: 130px;
+    max-height: 130px;
     height: 130px;
 }
 #profileImg {
@@ -222,7 +223,7 @@ form .profile-header {
 }
 form .profile-image {
     position: absolute;
-    top: 255px;
+    top: 170px;
     left: 8%;
     border: 5px solid black;
     border-radius: 50%;
@@ -337,6 +338,26 @@ form #profileBgBtn:hover + span{
     background-color: black;
     font-size: .8em;
 
+}
+#openModal{
+    border: 1px solid white !important;
+}
+main section naV div a{
+    border-radius: 0;
+    padding: 20px !important;
+    /* border:4px solid #4e93d7 !important; */
+}
+main section naV div a.active{
+    border-bottom:4px solid #4e93d7 !important;
+    color: white !important;
+}
+#scrollable-container{
+    border: none !important;
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+    
 }
 #openModal{
     border: 1px solid white !important;

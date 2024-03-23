@@ -112,6 +112,7 @@ class ImageUploader {
     }
 }
 
+
 const tabManager = new TabManager();
 const modal = new Modal();
 const formManager = new FormManager();
